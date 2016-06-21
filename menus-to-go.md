@@ -50,27 +50,27 @@ One such way is for our self-serve app, which leverages one of the server's end-
 
 #### Root
 
-Attribute | Description
------ | ----- 
-ipAddress | An echo back of the server's IP address
-isDetailedMenuItemCard | Boolean indicating whether or not the menu item requested is available for the detailed view
-isLockEnabled | Boolean indicating whether or not the menu item is locked
-isOrderModeEnabled | Boolean indicating whether or not the POS has been configured to allow self ordering
-maximumItemsInCart | Integer limit of how many items can be added to a self-order cart
-menuCategories | An array of category objects, each containing n menuItem objects
-menuItems | An array of menu item objects
+Attribute | Description | Type
+----- | ----- | -----
+ipAddress | An echo back of the server's IP address | string
+isDetailedMenuItemCard | Indicates whether or not the menu item requested is available for the detailed view | bool
+isLockEnabled | Indicates whether or not the menu item is locked | bool
+isOrderModeEnabled | Indicates whether or not the POS has been configured to allow self ordering | bool
+maximumItemsInCart | Limit of how many items can be added to a self-order cart | int
+menuCategories | An collection of categories, each containing n menuItem objects | array
+menuItems | A collection of menu item objects | array
 
 #### Menu Item
 
-Attribute | Description
------ | ----- 
-imagePath | The absolute path to the image associated with the menu item.
-itemDescription | The description of the menu item as a string.
-itemAllergens | A comma-seperated string of allergens.
-itemIngredients | A comma-seperated string of ingredients.
-name | The item name.
-price | The item price in dollars. 0 if not priced.
-uuid | The unique identifier for the menu item in the client-side data model.
+Attribute | Description | Type
+----- | -----  | -----
+imagePath | The absolute path to the image associated with the menu item. | string
+itemDescription | The description of the menu item | string
+itemAllergens | Comma-seperated allergens | string
+itemIngredients | Comma-seperated ingredients | string
+name | The item name | string
+price | The item price in dollars. 0 if not priced. | double
+uuid | The unique identifier for the menu item in the client-side data model | uuid
 
 ## Usage
 
