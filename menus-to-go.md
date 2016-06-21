@@ -16,6 +16,8 @@ One such way is for our self-serve app, which leverages one of the server's end-
 
 ```GET http://<ip>:<port>/getmenuformenuapp```
 
+### Params
+
 * `<ip>`: The local network IP for your TouchBistro server
 * `<port>`: 1337. Yea, we know.
 
@@ -29,8 +31,7 @@ One such way is for our self-serve app, which leverages one of the server's end-
   isOrderModeEnabled = 0;
   maximumItemsInCart = 0;
   menuCategories = ({
-    menuItems =             (
-                                {
+    menuItems = ({
                     imagePath = "";
                     itemDescription = "";
                     name = "Bud Light";
@@ -44,6 +45,36 @@ One such way is for our self-serve app, which leverages one of the server's end-
     });
 }
 ```
+
+### Params
+
+#### Root
+
+Attribute | Description
+----- | ----- 
+ipAddress | An echo back of the server's IP address
+isDetailedMenuItemCard | Boolean indicating whether or not the menu item requested is available for the detailed view
+isLockEnabled | Boolean indicating whether or not the menu item is locked
+isOrderModeEnabled | Boolean indicating whether or not the POS has been configured to allow self ordering
+maximumItemsInCart | Integer limit of how many items can be added to a self-order cart
+menuCategories | An array of category objects, each containing n menuItem objects
+menuItems | An array of menu item objects
+
+#### Menu Item
+
+Attribute | Description
+----- | ----- 
+imagePath | The absolute path to the image associated with the menu item.
+itemDescription | The description of the menu item as a string.
+itemAllergens | A comma-seperated string of allergens.
+itemIngredients | A comma-seperated string of ingredients.
+name | The item name.
+price | The item price in dollars. 0 if not priced.
+uuid | The unique identifier for the menu item in the client-side data model.
+
+## Usage
+
+In order to use this API, you need only write a small web or desktop app that can connect on the local network to the TouchBistro server app. That app can then poll the server directly via the above end-point. There is no encryption and no authentication required.
 
 # Index
 
