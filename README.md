@@ -5,6 +5,10 @@
 
 Sous Chef is a small collection of useful readmes and utilities designed to help our friendlies at other companies who may be integrating with either TouchBistro [Cloud](https://cloud.touchbistro.com/) or one of our TouchBistro [apps](https://itunes.apple.com/ca/developer/touchbistro-inc./id436784844).
 
+## Index
+
+* [*Menus To Go*](https://github.com/TouchBistro/sous-chef/blob/master/menus-to-go.md), our private API for polling menu info.
+
 ## Issues
 
 Have a bug or an issue with this template? Open an issue against the repo and we'll address it.
