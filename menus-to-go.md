@@ -70,7 +70,7 @@ itemAllergens | Comma-seperated allergens | string
 itemIngredients | Comma-seperated ingredients | string
 name | The item name | string
 price | The item price in dollars. 0 if not priced. | double
-uuid | The unique identifier for the menu item in the client-side data model | uuid
+uuid | The unique identifier for the menu item in the client-side data model | string
 
 ## Usage
 
