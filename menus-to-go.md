@@ -25,24 +25,22 @@ One such way is for our self-serve app, which leverages one of the server's end-
 
 ```
 {
-  ipAddress = "172.16.4.230";
-  isDetailedMenuItemCard = 0;
-  isLockEnabled = 0;
-  isOrderModeEnabled = 0;
-  maximumItemsInCart = 0;
-  menuCategories = ({
-    menuItems = ({
-                    imagePath = "";
-                    itemDescription = "";
-                    name = "Bud Light";
-                    price = "7.08";
-                    uuid = "150101000000~C2B28120-C4AC-40BA-91C7-504BBC94FA8A";
-                },...
-            );
-            name = Beer;
-            uuid = "150101000000~06949941-AD33-4A3C-BFFB-E2F84B36DAAF";
-        },...
-    });
+  "ipAddress": "172.16.4.230",
+  "isDetailedMenuItemCard": 0,
+  "isLockEnabled": 0,
+  "isOrderModeEnabled": 0,
+  "maximumItemsInCart": 0,
+  "menuCategories": [{
+    "menuItems": [{
+      "imagePath": "",
+      "itemDescription": "",
+      "name": "Bud Light",
+      "price": "7.08",
+      "uuid": "150101000000~C2B28120-C4AC-40BA-91C7-504BBC94FA8A"
+    }],
+    "name": "Beer",
+    "uuid": "150101000000~06949941-AD33-4A3C-BFFB-E2F84B36DAAF"
+  }]
 }
 ```
 
