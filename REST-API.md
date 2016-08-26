@@ -42,6 +42,7 @@ The following documentation is
 Attribute | Description | Type
 ----- | ----- | -----
 restaurant_name | The display name of the restuarant | string
+menus | The collection of menus for the restaurant | menus
 
 ##### Menu
 
