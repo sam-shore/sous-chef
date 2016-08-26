@@ -1,7 +1,12 @@
 # REST API
 
-The following documentation is 
+The following documentation is designed to help you connect with the REST API. There are a number of different end-points available internally and one publicly at this time.
 
+## Menus
+
+### Authentication
+
+This API is publically accessible once enabled for a given restaurant.
 
 ### Request
 
