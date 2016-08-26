@@ -7,6 +7,7 @@ Sous Chef is a small collection of useful readmes and utilities designed to help
 
 ## Index
 
+* [*REST API*](https://github.com/TouchBistro/sous-chef/blob/master/rest-api.md), our REST API docs.
 * [*Menus To Go*](https://github.com/TouchBistro/sous-chef/blob/master/menus-to-go.md), our private API for polling menu info.
 
 ## Issues
