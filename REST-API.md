@@ -79,8 +79,8 @@ desc | The description of the menu item | string
 price | The item price in dollars. 0 if not priced. | double
 thumbnail_image_url | The absolute path to the thumbnail image associated with the menu item. | string
 image_url | The absolute path to the image associated with the menu item. | string
-itemAllergens | Comma-seperated allergens (coming soon) | string
-itemIngredients | Comma-seperated ingredients (coming soon) | string
+item_allergens | Comma-seperated allergens (coming soon) | string
+item_ingredients | Comma-seperated ingredients (coming soon) | string
 
 # Index
 
