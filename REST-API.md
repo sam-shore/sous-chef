@@ -93,7 +93,9 @@ item_ingredients | Comma-seperated ingredients (coming soon) | string
 
 ### Authentication
 
-This API is requires an authentication token which is passed in as a query parameter. This is only a stop-gap measure for interim usage and will be replaced by a proper obfuscated authentication header in the future.
+This API requires an authentication token which is passed in as a query parameter. 
+
+**Note**: This approach to security is only a stop-gap measure for interim usage and will be replaced by a proper obfuscated authentication header in the future.
 
 ### Request
 
