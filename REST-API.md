@@ -97,73 +97,53 @@ This API requires an authentication token which is passed in as a query paramete
 
 ### Request
 
-```GET https://cloud.touchbistro.com/api/v1/bills?restaurant_id=<id>&from=<datetime>&to=<datetime>&authentication_token=<api_token>```
+```GET https://cloud.touchbistro.com/api/v1/bills?restaurant_id=<id>&from=<datetime>&to=<datetime>&authentication_token=<api_token>&per=<amount>&page=<page_num>```
 
 #### Params
 
 * `<id>`: The unique identifier for your restaurant. This will be provided to you by TouchBistro.
 * `<datetime>`: A datetime stamp in the ISO 8601 format (e.g., 2016-03-14T16:43:22Z)
 * `<api_token>`: The unique API Token associated with your TouchBistro Dev account. This will be provided to you by TouchBistro.
+* `<amount>`: The amount of records to return in the request.
+* `<page_num>`: The page number of records.
 
 ### Response
 
 ```
-{  
-   "bills":[  
-      {  
-         "id":41995628,
-         "uuid":"12B921EE-1B06-41E6-9A91-F060D17D5E18",
-         "order_number":5867,
-         "bill_number":9234,
-         "tax_1":"9.87",
-         "tax_2":"0.0",
-         "paid_at":"2016-06-06T17:24:49.000Z",
-         "paid_at_local":"2016-06-06T13:24:49.000Z",
-         "order_items":[  
-            {  
-               "uuid":"276FF8A5-77BC-49A0-AD28-D461EB56D6FE",
-               "simple_modifier":false,
-               "total":"6.99"
-            },
-            {  
-               "uuid":"2899268A-4BC0-4701-B026-C11A5D15A645",
-               "simple_modifier":false,
-               "total":"22.99"
-            },
-            {  
-               "uuid":"BCB39733-3A95-467B-B3F1-92BD84D60DC0",
-               "simple_modifier":false,
-               "total":"18.99"
-            },
-            {  
-               "uuid":"AAD9393D-7FD7-4C5A-9BF7-C6A9084A4019",
-               "simple_modifier":false,
-               "total":"8.99"
-            },
-            {  
-               "uuid":"C6DCD5FC-C14F-43FA-BCD5-0CD01991F05F",
-               "simple_modifier":false,
-               "total":"9.99"
-            },
-            {  
-               "uuid":"608A0CF4-9847-4CC1-BC33-9303C662BE9D",
-               "simple_modifier":false,
-               "total":"7.99"
-            }
-         ],
-         "payments":[  
-            {  
-               "payment_method":"Cash",
-               "total":"85.81",
-               "tip":"0.0",
-               "change":"0.0"
-            }
-         ],
-         "total":"85.809999999999999",
-         "sub_total":"75.94",
-         "taxes":9.87,
-         "universal_identifier":"10210-20160606-9234-5E18"
-      }]
+{
+	"bills": [{
+		"id": 55032173,
+		"uuid": "48D23CB6-82B8-4C56-8DF2-28D67649125F",
+		"order_number": 5896,
+		"bill_number": 9268,
+		"tax_1": "0.26",
+		"tax_2": "0.0",
+		"tax_3": "0.0",
+		"tax_1_name": "Tax 1",
+		"tax_2_name": "Tax 2",
+		"tax_3_name": "Tax 3",
+		"paid_at": "2016-08-05T18:18:51.000Z",
+		"paid_at_local": "2016-08-05T14:18:51.000Z",
+		"order_items": [{
+			"uuid": "9EFF7CC7-BFD2-412F-956E-FC4235056D90",
+			"parent_id": null,
+			"simple_modifier": false,
+			"discounts_total": "0.0",
+			"menu_item": "Lobster Tail",
+			"quantity": "1.0",
+			"total": "2.0"
+		}],
+		"payments": [{
+			"payment_method": "VISA",
+			"total": "2.26",
+			"tip": "3.0",
+			"change": "0.0"
+		}],
+		"total": "2.26",
+		"sub_total": "2.0",
+		"taxes": 0.26,
+		"universal_identifier": "8452-20160805-9268-125F"
+	}]
 }
 ```
 
