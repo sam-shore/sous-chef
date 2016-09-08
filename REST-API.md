@@ -1,6 +1,6 @@
 # REST API
 
-The following documentation is designed to help you connect with the REST API. There are a number of different end-points available internally and one publicly at this time.
+The following documentation is designed to help you connect with the REST API. Each section defines an endpoint, the request parameters, and the response attributes.
 
 ## Contents
 
