@@ -97,15 +97,13 @@ This API requires an authentication token which is passed in as a query paramete
 
 ### Request
 
-```GET https://cloud.touchbistro.com/api/v1/bills?restaurant_id=<id>&from=<datetime>&to=<datetime>&authentication_token=<api_token>&per=<amount>&page=<page_num>```
+```GET https://cloud.touchbistro.com/api/v1/bills?restaurant_id=<id>&from=<datetime>&to=<datetime>&authentication_token=<api_token>```
 
 #### Params
 
 * `<id>`: The unique identifier for your restaurant. This will be provided to you by TouchBistro.
 * `<datetime>`: A datetime stamp in the ISO 8601 format (e.g., 2016-03-14T16:43:22Z)
 * `<api_token>`: The unique API Token associated with your TouchBistro Dev account. This will be provided to you by TouchBistro.
-* `<amount>`: The amount of records to return in the request.
-* `<page_num>`: The page number of records.
 
 ### Response
 
