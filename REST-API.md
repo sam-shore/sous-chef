@@ -89,7 +89,7 @@ image_url | The absolute path to the image associated with the menu item. | stri
 item_allergens | Comma-seperated allergens (coming soon) | string
 item_ingredients | Comma-seperated ingredients (coming soon) | string
 
-## <a name="bills"></a>Bills
+## <a name="Shifts"></a>Shifts
 
 ### Authentication
 
@@ -97,7 +97,7 @@ This API requires an authentication token which is passed in as a query paramete
 
 ### Request
 
-```GET https://cloud.touchbistro.com/api/v1/bills?restaurant_id=<id>&from=<datetime>&to=<datetime>&authentication_token=<api_token>```
+```GET https://cloud.touchbistro.com/cloud/shifts?restaurant_id=<id>&from=<datetime>&to=<datetime>&authentication_token=<api_token>```
 
 #### Params
 
@@ -108,68 +108,60 @@ This API requires an authentication token which is passed in as a query paramete
 ### Response
 
 ```
-{
-	"bills": [{
-		"id": 55032173,
-		"uuid": "48D23CB6-82B8-4C56-8DF2-28D67649125F",
-		"order_number": 5896,
-		"bill_number": 9268,
-		"tax_1": "0.26",
-		"tax_2": "0.0",
-		"tax_3": "0.0",
-		"tax_1_name": "Tax 1",
-		"tax_2_name": "Tax 2",
-		"tax_3_name": "Tax 3",
-		"paid_at": "2016-08-05T18:18:51.000Z",
-		"paid_at_local": "2016-08-05T14:18:51.000Z",
-		"order_items": [{
-			"uuid": "9EFF7CC7-BFD2-412F-956E-FC4235056D90",
-			"parent_id": null,
-			"simple_modifier": false,
-			"discounts_total": "0.0",
-			"menu_item": "Lobster Tail",
-			"quantity": "1.0",
-			"total": "2.0"
-		}],
-		"payments": [{
-			"payment_method": "VISA",
-			"total": "2.26",
-			"tip": "3.0",
-			"change": "0.0"
-		}],
-		"total": "2.26",
-		"sub_total": "2.0",
-		"taxes": 0.26,
-		"universal_identifier": "8452-20160805-9268-125F"
-	}]
-}
+[{
+	"waiter_name": "Alex",
+	"shift_type_name": "General Manager",
+	"started_at_local": "2016-09-07T15:09:28.000+00:00",
+	"finished_at_local": "2016-09-07T15:10:14.000+00:00",
+	"duration_in_hours": 0.012777,
+	"rate_of_pay": 15.75,
+	"labor_cost": 0.2
+}, {
+	"waiter_name": "Alex",
+	"shift_type_name": "General Manager",
+	"started_at_local": "2016-09-07T15:11:48.000+00:00",
+	"finished_at_local": "2016-09-07T15:12:00.000+00:00",
+	"duration_in_hours": 0.003333,
+	"rate_of_pay": 15.75,
+	"labor_cost": 0.05
+}, {
+	"waiter_name": "Alex",
+	"shift_type_name": "General Manager",
+	"started_at_local": "2016-09-07T15:12:29.000+00:00",
+	"finished_at_local": "2016-09-13T16:39:25.000+00:00",
+	"duration_in_hours": 145.448888,
+	"rate_of_pay": 15.75,
+	"labor_cost": 2290.82
+}, {
+	"waiter_name": "Alex",
+	"shift_type_name": "General Manager",
+	"started_at_local": "2016-09-20T12:14:26.000+00:00",
+	"finished_at_local": "2016-09-20T12:47:17.000+00:00",
+	"duration_in_hours": 0.5475,
+	"rate_of_pay": 15.75,
+	"labor_cost": 8.62
+}]
 ```
 
 #### Attributes
 
-##### Bills
+##### Shifts
 
 Attribute | Description | Type
 ----- | ----- | -----
-bills | The list of bills | bill
+Shifts | The list of shifts | shift
 
-##### Bill
+##### shift
 
 Attribute | Description | Type
 ----- | ----- | -----
-id | A global identifer for the bill | big int
-uuid | A unique identifer for the bill | uuid
-order_number | A friendly order number identifier | small int
-bill_number | A friendly bill number identifier | small int
-paid_at | A datetime stamp indicating when the bill was paid with the payment processor | datetime
-paid_at_local | A datetime stamp indicating when the bill was paid on the iPad | datetime
-order_items | An array of items on the bill | order_item
-payments | An array of payment information | payment
-total | The total amount of the bill | float
-sub_total | The sub-total of the bill before taxes | float
-taxes | The tax amount for the bill | float
-universal_identifier | The unique identifier for the bill between cloud and iOS | uid
-
+waiter_name | The waiter's name | string
+shift_type_name | The role or staff type for the shift | string
+started_at_local | The shift start time | datetime
+finished_at_local | The shift end time | datetime
+duration_in_hours | The decimal hour duration of the shift | float
+rate_of_pay | The rate of pay for the role during that shift | decimal
+labor_cost | The cost of labor total for the shift | decimal
 
 # Index
 
