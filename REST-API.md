@@ -8,6 +8,7 @@ Endpoint | Description
 --- | --- |
 [Menu](#menu) | Retrieve menu metadata, including menu item names and images
 [Bills](#bills) | Retrieve closed bills metadata, including sales amounts
+[Shifts](#shifts) | Retrieve shifts, including labor costs
 
 ## <a name="menu"></a>Menu
 
