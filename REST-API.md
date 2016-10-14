@@ -179,12 +179,12 @@ This API requires an authentication token which is passed in as a query paramete
 
 ### Request
 
-```GET https://cloud.touchbistro.com/cloud/shifts?restaurant_id=<id>&from=<datetime>&to=<datetime>&authentication_token=<api_token>```
+```GET https://cloud.touchbistro.com/cloud/reporting/shifts?start=<datetime>&end=<datetime>&report=shifts&authentication_token=<api_token>&restaurant_id=<id>
 
 #### Params
 
 * `<id>`: The unique identifier for your restaurant. This will be provided to you by TouchBistro.
-* `<datetime>`: A datetime stamp in the ISO 8601 format (e.g., 2016-03-14T16:43:22Z)
+* `<datetime>`: A datetime stamp in the UNX format (e.g., 1471219200)
 * `<api_token>`: The unique API Token associated with your TouchBistro Dev account. This will be provided to you by TouchBistro.
 
 ### Response
