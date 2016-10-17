@@ -11,6 +11,7 @@ Endpoint | Description
 [Summary](#Dashboard) | Retrieve the main summary dashboard
 [Drilldown](#Drilldown) | Retrieve the drilldown dashboard
 [Sales by Day](#SalesByDay) | Retrieve the sales by day report
+[Sales by Category](#SalesbyCategory) | Retrieve the sales by category report
 [Shifts](#shifts) | Retrieve shifts, including labor costs
 
 ## <a name="menu"></a>Menu
@@ -865,6 +866,88 @@ sales_revenue | The per day sales totals (before tax). | string
 quantity | The number of menu items sold. This does not include voids. | decimal
 void_revenue | The value of voids (items voided after they were sent to the kitchen) authorized by a manager or admin. | decimal
 group_day | Sales day | string
+
+
+## <a name="SalesbyCategory"></a>Sales by Category
+
+### Authentication
+
+This API requires an authentication token which is passed in as a query parameter. As a result, the request must be sent over HTTPS.
+
+### Request
+```GET https://cloud.touchbistro.com/cloud/reporting/sales-by-menu-category?start=<datetime>&end=<datetime>&report=sales-by-menu-category&authentication_token=<api_token>&restaurant_id=<id>```
+
+#### Params
+
+* `<datetime>`: A datetime stamp in the UNX format (e.g., 1471219200)
+* `<api_token>`: The unique API Token associated with your TouchBistro Dev account. This will be provided to you by TouchBistro.
+* `<id>`: The unique identifier for your restaurant. This will be provided to you by TouchBistro.
+
+
+### Response
+
+```
+[
+  {
+    "menu_category_name": "Mains",
+    "sales_revenue": 349.6625,
+    "void_revenue": 12.75,
+    "quantity": 24,
+    "void_quantity": 1
+  },
+  {
+    "menu_category_name": "Beer",
+    "sales_revenue": 348.99,
+    "void_revenue": 14.25,
+    "quantity": 73,
+    "void_quantity": 3
+  },
+  {
+    "menu_category_name": "Appetizers",
+    "sales_revenue": 191.94,
+    "void_revenue": 5,
+    "quantity": 48,
+    "void_quantity": 1
+  },
+  {
+    "menu_category_name": "Vodka",
+    "sales_revenue": 24.3,
+    "void_revenue": 0,
+    "quantity": 4,
+    "void_quantity": 0
+  },
+  {
+    "menu_category_name": "Desserts",
+    "sales_revenue": 21.92,
+    "void_revenue": 5.56,
+    "quantity": 6,
+    "void_quantity": 1
+  },
+  {
+    "menu_category_name": "Coffee",
+    "sales_revenue": 20.65,
+    "void_revenue": 0,
+    "quantity": 9,
+    "void_quantity": 0
+  },
+  {
+    "menu_category_name": "Soft Drinks",
+    "sales_revenue": 12.75,
+    "void_revenue": 0,
+    "quantity": 8,
+    "void_quantity": 0
+  },
+]
+```
+
+Attribute | Description | Type
+----- | ----- | -----
+menu_category_name | Name of the menu category. | string
+sales_revenue | The before taxes sales total for each category. | decimal
+void_revenue | The value of voids (items voided after they were sent to the kitchen) authorized by a manager or admin in this category. | string
+quantity | The actual number of items ordered and billed within this category. This does not include voids. | decimal
+void_quantity | The number of items voided within this category. | decimal
+
 
 
 # Index
