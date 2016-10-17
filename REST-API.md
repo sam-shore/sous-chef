@@ -12,6 +12,7 @@ Endpoint | Description
 [Drilldown](#Drilldown) | Retrieve the drilldown dashboard
 [Sales by Day](#SalesByDay) | Retrieve the sales by day report
 [Sales by Category](#SalesbyCategory) | Retrieve the sales by category report
+[Menu Item Sales](#MenuItemSales) | Retrieve the menu item sales report
 [Shifts](#shifts) | Retrieve shifts, including labor costs
 
 ## <a name="menu"></a>Menu
@@ -948,6 +949,148 @@ void_revenue | The value of voids (items voided after they were sent to the kitc
 quantity | The actual number of items ordered and billed within this category. This does not include voids. | decimal
 void_quantity | The number of items voided within this category. | decimal
 
+## <a name="MenuItemSales"></a>Menu Item Sales
+
+### Authentication
+
+This API requires an authentication token which is passed in as a query parameter. As a result, the request must be sent over HTTPS.
+
+### Request
+```GET https://cloud.touchbistro.com/cloud/reporting/sales-by-menu-item?start=<datetime>&end=<datetime>&report=sales-by-menu-item&authentication_token=<api_token>&restaurant_id=<id>```
+
+#### Params
+
+* `<datetime>`: A datetime stamp in the UNX format (e.g., 1471219200)
+* `<api_token>`: The unique API Token associated with your TouchBistro Dev account. This will be provided to you by TouchBistro.
+* `<id>`: The unique identifier for your restaurant. This will be provided to you by TouchBistro.
+
+
+### Response
+```
+[
+  {
+    "menu_item_name": "Muller Time Lager",
+    "sales_category_name": "Alcohol",
+    "menu_category_name": "Beer",
+    "sales_revenue": 251.75,
+    "void_revenue": 14.25,
+    "quantity": 53,
+    "void_quantity": 3,
+    "record_count": 12,
+    "sales_percentage": 24.7157201306718
+  },
+  {
+    "menu_item_name": "Pulled Pork",
+    "sales_category_name": "Food",
+    "menu_category_name": "Mains",
+    "sales_revenue": 160.5625,
+    "void_revenue": 12.75,
+    "quantity": 13,
+    "void_quantity": 1,
+    "record_count": 14,
+    "sales_percentage": 15.7633279582164
+  },
+  {
+    "menu_item_name": "Bacon Burger",
+    "sales_category_name": "Food",
+    "menu_category_name": "Mains",
+    "sales_revenue": 109.5,
+    "void_revenue": 0,
+    "quantity": 6,
+    "void_quantity": 0,
+    "record_count": 6,
+    "sales_percentage": 10.7502337807689
+  },
+  {
+    "menu_item_name": "Loaded Nachos",
+    "sales_category_name": "Food",
+    "menu_category_name": "Appetizers",
+    "sales_revenue": 83,
+    "void_revenue": 5,
+    "quantity": 17,
+    "void_quantity": 1,
+    "record_count": 18,
+    "sales_percentage": 8.14857903017183
+  },
+  {
+    "menu_item_name": "Pasta and Clams",
+    "sales_category_name": "Food",
+    "menu_category_name": "Mains",
+    "sales_revenue": 79.6,
+    "void_revenue": 0,
+    "quantity": 5,
+    "void_quantity": 0,
+    "record_count": 5,
+    "sales_percentage": 7.81478181688768
+  },
+  {
+    "menu_item_name": "Victory Ale",
+    "sales_category_name": "Alcohol",
+    "menu_category_name": "Beer",
+    "sales_revenue": 79.05,
+    "void_revenue": 0,
+    "quantity": 17,
+    "void_quantity": 0,
+    "record_count": 4,
+    "sales_percentage": 7.76078520885642
+  },
+  {
+    "menu_item_name": "House Salad",
+    "sales_category_name": "Food",
+    "menu_category_name": "Appetizers",
+    "sales_revenue": 29,
+    "void_revenue": 0,
+    "quantity": 8,
+    "void_quantity": 0,
+    "record_count": 8,
+    "sales_percentage": 2.84709387801184
+  },
+  {
+    "menu_item_name": "Pancakes",
+    "sales_category_name": "Food",
+    "menu_category_name": "Breakfast",
+    "sales_revenue": 23.97,
+    "void_revenue": 0,
+    "quantity": 3,
+    "void_quantity": 0,
+    "record_count": 3,
+    "sales_percentage": 2.35327035365324
+  },
+  {
+    "menu_item_name": "Singapore Sling",
+    "sales_category_name": "Alcohol",
+    "menu_category_name": "Cocktails",
+    "sales_revenue": 0,
+    "void_revenue": 25.1,
+    "quantity": 0,
+    "void_quantity": 2,
+    "record_count": 2,
+    "sales_percentage": 0
+  },
+  {
+    "menu_item_name": "Zombie",
+    "sales_category_name": "Alcohol",
+    "menu_category_name": "Cocktails",
+    "sales_revenue": 0,
+    "void_revenue": 19.98,
+    "quantity": 0,
+    "void_quantity": 2,
+    "record_count": 1,
+    "sales_percentage": 0
+  }
+]
+```
+Attribute | Description | Type
+----- | ----- | -----
+menu_item_name | Name of the menu item | string
+sales_category_name | A configured sales category. | string
+menu_category_name | A menu category. | string
+sales_revenue | The before taxes sales total for each menu item. Totals do not include tax and gratuity. The total also does not represent voids. | decimal
+void_revenue | Total  voids in dollar amounts authorized for each menu item. | decimal
+quantity | The number of times this item has been billed. | int
+void_quantity | The number of times the item has been voided. | int
+record_count | The total number of times this item has been ordered (billed plus voided). | int
+sales_percentage | Percentage of sales. | float
 
 
 # Index
