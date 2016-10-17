@@ -14,6 +14,7 @@ Endpoint | Description
 [Sales by Category](#SalesbyCategory) | Retrieve the sales by category report
 [Menu Item Sales](#MenuItemSales) | Retrieve the menu item sales report
 [Payments](#Payments) | Retrieve the payments report
+[Sales by Section](#SalesbySection) | Retrieve the sales by section report
 [Shifts](#shifts) | Retrieve shifts, including labor costs
 
 ## <a name="menu"></a>Menu
@@ -1151,6 +1152,68 @@ tip_total | The amount in tips or auto grats. The cash payment method will not i
 record_count | Number of bills settled with the payment type. | int
 sales_total | Amount tendered or charged. Totals include tax, credit card gratuities, and auto-grats. The cash total will not include tips or auto grats. | decimal
 
+## <a name="SalesbySection"></a>Sales by Section
+
+### Authentication
+
+This API requires an authentication token which is passed in as a query parameter. As a result, the request must be sent over HTTPS.
+
+### Request
+```GET https://cloud.touchbistro.com/cloud/reporting/sales-by-section?start=<datetime>&end=<datetime>&report=sales-by-section&authentication_token=<api_token>&restaurant_id=<id>```
+
+#### Params
+
+* `<datetime>`: A datetime stamp in the UNX format (e.g., 1471219200)
+* `<api_token>`: The unique API Token associated with your TouchBistro Dev account. This will be provided to you by TouchBistro.
+* `<id>`: The unique identifier for your restaurant. This will be provided to you by TouchBistro.
+
+
+### Response
+
+```
+[
+  {
+    "section_name": "Counter",
+    "sales_revenue": 33,
+    "void_revenue": 0,
+    "discount_revenue": 0,
+    "quantity": 4,
+    "void_quantity": 0
+  },
+  {
+    "section_name": "Main",
+    "sales_revenue": 3094.725,
+    "void_revenue": 2.65,
+    "discount_revenue": 55.625,
+    "quantity": 361,
+    "void_quantity": 53
+  },
+  {
+    "section_name": "Takeout",
+    "sales_revenue": 799.45,
+    "void_revenue": 156.87,
+    "discount_revenue": 14,
+    "quantity": 127,
+    "void_quantity": 24
+  },
+  {
+    "section_name": "Cash Register",
+    "sales_revenue": 3159.1625,
+    "void_revenue": 74.33,
+    "discount_revenue": 23.6875,
+    "quantity": 423,
+    "void_quantity": 15
+  }
+]
+```
+Attribute | Description | Type
+----- | ----- | -----
+section_name | Name given to the floor plan section. | string
+sales_revenue | Sales, before taxes, for this section. | float
+void_revenue | Total value of voids authorized under this section. | float
+discount_revenue | Total value of discounts given under this section. | float
+quantity | Total number of menu items billed in this section. | int
+void_quantity | Total number of voids authorized in this section. This does not include discounts. | int
 
 
 # Index
