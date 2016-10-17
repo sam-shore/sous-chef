@@ -362,12 +362,6 @@ This API requires an authentication token which is passed in as a query paramete
       "record_count": 9
     },
     {
-      "menu_item_name": "Bacon Burger",
-      "sales_revenue": 109.5,
-      "quantity": 6,
-      "record_count": 6
-    },
-    {
       "menu_item_name": "Pasta and Clams",
       "sales_revenue": 79.6,
       "quantity": 5,
@@ -376,8 +370,8 @@ This API requires an authentication token which is passed in as a query paramete
     {
       "menu_item_name": "Victory Ale",
       "sales_revenue": 79.05,
-      "quantity": 17,
-      "record_count": 4
+      "quantity": 4,
+      "record_count": 6
     },
     {
       "menu_item_name": "Loaded Nachos",
@@ -439,12 +433,6 @@ This API requires an authentication token which is passed in as a query paramete
       "quantity": 1,
       "record_count": 2
     },
-    {
-      "menu_item_name": "Stolkan",
-      "sales_revenue": 6.1,
-      "quantity": 1,
-      "record_count": 1
-    }
   ]
 ]
 ```
