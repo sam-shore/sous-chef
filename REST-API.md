@@ -10,6 +10,7 @@ Endpoint | Description
 [Bills](#bills) | Retrieve closed bills metadata, including sales amounts
 [Summary](#Dashboard) | Retrieve the main summary dashboard
 [Drilldown](#Drilldown) | Retrieve the drilldown dashboard
+[Sales by Day](#SalesByDay) | Retrieve the sales by day report
 [Shifts](#shifts) | Retrieve shifts, including labor costs
 
 ## <a name="menu"></a>Menu
@@ -763,6 +764,107 @@ void_revenue | The total value of this item voided. | decimal
 quantity | The total number of this item sold. | int
 void_quantity | The total number of this item voided. | int
 
+
+## <a name="SalesByDay"></a>Sales by Day
+
+### Authentication
+
+This API requires an authentication token which is passed in as a query parameter. As a result, the request must be sent over HTTPS.
+
+### Request
+```GET https://cloud.touchbistro.com/cloud/reporting/sales-by-day?start=<datetime>&end=<datetime>&report=sales-by-day&authentication_token=<api_token>&restaurant_id=<id>```
+
+#### Params
+
+* `<datetime>`: A datetime stamp in the UNX format (e.g., 1471219200)
+* `<api_token>`: The unique API Token associated with your TouchBistro Dev account. This will be provided to you by TouchBistro.
+* `<id>`: The unique identifier for your restaurant. This will be provided to you by TouchBistro.
+
+### Response
+
+```
+[
+  {
+    "sales_revenue": 62.74,
+    "quantity": 8,
+    "void_revenue": 0,
+    "group_day": "2016-09-06"
+  },
+  {
+    "sales_revenue": 33.2,
+    "quantity": 4,
+    "void_revenue": 0,
+    "group_day": "2016-09-07"
+  },
+  {
+    "sales_revenue": 180.64,
+    "quantity": 23,
+    "void_revenue": 0,
+    "group_day": "2016-09-08"
+  },
+  {
+    "sales_revenue": 127.22,
+    "quantity": 12,
+    "void_revenue": 152.88,
+    "group_day": "2016-09-09"
+  },
+  {
+    "sales_revenue": 1380.555,
+    "quantity": 180,
+    "void_revenue": 2.65,
+    "group_day": "2016-09-11"
+  },
+  {
+    "sales_revenue": 515.55,
+    "quantity": 64,
+    "void_revenue": 0,
+    "group_day": "2016-09-13"
+  },
+  {
+    "sales_revenue": 3974.44,
+    "quantity": 503,
+    "void_revenue": 9.99,
+    "group_day": "2016-09-14"
+  },
+  {
+    "sales_revenue": 707.46,
+    "quantity": 101,
+    "void_revenue": 4,
+    "group_day": "2016-09-15"
+  },
+  {
+    "sales_revenue": 28,
+    "quantity": 3,
+    "void_revenue": 0,
+    "group_day": "2016-09-16"
+  },
+  {
+    "sales_revenue": 50.2825,
+    "quantity": 11,
+    "void_revenue": 59.33,
+    "group_day": "2016-09-20"
+  },
+  {
+    "sales_revenue": 6.25,
+    "quantity": 2,
+    "void_revenue": 5,
+    "group_day": "2016-09-27"
+  },
+  {
+    "sales_revenue": 20,
+    "quantity": 4,
+    "void_revenue": 0,
+    "group_day": "2016-09-28"
+  }
+]
+```
+
+Attribute | Description | Type
+----- | ----- | -----
+sales_revenue | The per day sales totals (before tax). | string
+quantity | The number of menu items sold. This does not include voids. | decimal
+void_revenue | The value of voids (items voided after they were sent to the kitchen) authorized by a manager or admin. | decimal
+group_day | Sales day | string
 
 
 # Index
