@@ -13,6 +13,7 @@ Endpoint | Description
 [Sales by Day](#SalesByDay) | Retrieve the sales by day report
 [Sales by Category](#SalesbyCategory) | Retrieve the sales by category report
 [Menu Item Sales](#MenuItemSales) | Retrieve the menu item sales report
+[Payments](#Payments) | Retrieve the payments report
 [Shifts](#shifts) | Retrieve shifts, including labor costs
 
 ## <a name="menu"></a>Menu
@@ -1091,6 +1092,65 @@ quantity | The number of times this item has been billed. | int
 void_quantity | The number of times the item has been voided. | int
 record_count | The total number of times this item has been ordered (billed plus voided). | int
 sales_percentage | Percentage of sales. | float
+
+## <a name="Payments"></a>Payments
+
+### Authentication
+
+This API requires an authentication token which is passed in as a query parameter. As a result, the request must be sent over HTTPS.
+
+### Request
+```GET https://cloud.touchbistro.com/cloud/reporting/payments?start=<datetime>&end=<datetime>&report=payments&authentication_token=<api_token>&restaurant_id=<id>```
+
+#### Params
+
+* `<datetime>`: A datetime stamp in the UNX format (e.g., 1471219200)
+* `<api_token>`: The unique API Token associated with your TouchBistro Dev account. This will be provided to you by TouchBistro.
+* `<id>`: The unique identifier for your restaurant. This will be provided to you by TouchBistro.
+
+
+### Response
+
+```
+[
+  {
+    "payment_method_name": "Cash",
+    "total_amount": 750.29,
+    "tip_total": 0,
+    "record_count": 32,
+    "sales_total": 750.29
+  },
+  {
+    "payment_method_name": "Visa",
+    "total_amount": 300.63,
+    "tip_total": 53.45,
+    "record_count": 2,
+    "sales_total": 354.08
+  },
+  {
+    "payment_method_name": "AMEX",
+    "total_amount": 118.5,
+    "tip_total": 19.13,
+    "record_count": 2,
+    "sales_total": 137.63
+  },
+  {
+    "payment_method_name": "MasterCard",
+    "total_amount": 85.37,
+    "tip_total": 16.94,
+    "record_count": 3,
+    "sales_total": 102.31
+  }
+]
+```
+Attribute | Description | Type
+----- | ----- | -----
+payment_method_name | Type of payment (cash, credit card name, etc.) | string
+total_amount | Amount tendered or charged. Totals include tax. | decimal
+tip_total | The amount in tips or auto grats. The cash payment method will not include tips or auto grats. | decimal
+record_count | Number of bills settled with the payment type. | int
+sales_total | Amount tendered or charged. Totals include tax, credit card gratuities, and auto-grats. The cash total will not include tips or auto grats. | decimal
+
 
 
 # Index
