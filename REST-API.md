@@ -356,12 +356,6 @@ This API requires an authentication token which is passed in as a query paramete
   ],
   [
     {
-      "menu_item_name": "Muller Time Lager",
-      "sales_revenue": 251.75,
-      "quantity": 53,
-      "record_count": 9
-    },
-    {
       "menu_item_name": "Pulled Pork",
       "sales_revenue": 114.75,
       "quantity": 9,
@@ -390,18 +384,6 @@ This API requires an authentication token which is passed in as a query paramete
       "sales_revenue": 35,
       "quantity": 7,
       "record_count": 7
-    },
-    {
-      "menu_item_name": "Pancakes",
-      "sales_revenue": 23.97,
-      "quantity": 3,
-      "record_count": 3
-    },
-    {
-      "menu_item_name": "Ham Delights",
-      "sales_revenue": 17.25,
-      "quantity": 3,
-      "record_count": 3
     },
     {
       "menu_item_name": "Wing Nibbler",
@@ -434,12 +416,6 @@ This API requires an authentication token which is passed in as a query paramete
       "record_count": 3
     },
     {
-      "menu_item_name": "Old Trog IPA",
-      "sales_revenue": 11.94,
-      "quantity": 2,
-      "record_count": 2
-    },
-    {
       "menu_item_name": "Omelette",
       "sales_revenue": 9.95,
       "quantity": 1,
@@ -456,12 +432,6 @@ This API requires an authentication token which is passed in as a query paramete
       "sales_revenue": 8,
       "quantity": 2,
       "record_count": 2
-    },
-    {
-      "menu_item_name": "Velvet",
-      "sales_revenue": 8,
-      "quantity": 1,
-      "record_count": 1
     },
     {
       "menu_item_name": "Trent Dark Ale",
