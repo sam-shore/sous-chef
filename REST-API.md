@@ -8,7 +8,7 @@ Endpoint | Description
 --- | --- |
 [Menu](#menu) | Retrieve menu metadata, including menu item names and images
 [Bills](#bills) | Retrieve closed bills metadata, including sales amounts
-[Dashboard](#Dashboard) | Retrieve the main dashboard
+[Summary](#Dashboard) | Retrieve the main summary dashboard
 [Shifts](#shifts) | Retrieve shifts, including labor costs
 
 ## <a name="menu"></a>Menu
@@ -485,6 +485,283 @@ menu_item_name | Menu item name. | string
 sales_revenue |  Total before tax sales accrued for that menu item | decimal
 quantity | The number of the menu items sold | decimal
 record_count | The number of these items ordered, including voided items. | int
+
+## <a name="Drilldown"></a>Drilldown
+
+### Authentication
+
+This API requires an authentication token which is passed in as a query parameter. As a result, the request must be sent over HTTPS.
+
+### Request
+```GET https://cloud.touchbistro.com/cloud/reporting/drilldown?start=<datetime>&end=<datetime>&report=drilldown&authentication_token=<api_token>&restaurant_id=<id>```
+
+#### Params
+
+* `<datetime>`: A datetime stamp in the UNX format (e.g., 1471219200)
+* `<api_token>`: The unique API Token associated with your TouchBistro Dev account. This will be provided to you by TouchBistro.
+* `<id>`: The unique identifier for your restaurant. This will be provided to you by TouchBistro.
+
+
+### Response
+
+```
+[
+  {
+    "hour_of_day": 10,
+    "section_name": "Takeout",
+    "sales_category_name": "Food",
+    "menu_category_name": "Soft Drinks",
+    "menu_item_name": "Cola",
+    "records": 3,
+    "sales_revenue": 2.40,
+    "void_revenue":1.20,
+    "quantity": 2,
+    "void_quantity": 1
+  },
+  {
+    "hour_of_day": 9,
+    "section_name": "Main",
+    "sales_category_name": "Alcohol",
+    "menu_category_name": "Cocktails",
+    "menu_item_name": "Singapore Sling",
+    "records": 2,
+    "sales_revenue": 25.1,
+    "void_revenue": 0,
+    "quantity": 2,
+    "void_quantity": 0
+  },
+  {
+    "hour_of_day": 9,
+    "section_name": "Takeout",
+    "sales_category_name": "Alcohol",
+    "menu_category_name": "Cocktails",
+    "menu_item_name": "Rum And Coke",
+    "records": 1,
+    "sales_revenue": 0,
+    "void_revenue": 5.53,
+    "quantity": 0,
+    "void_quantity": 1
+  },
+  {
+    "hour_of_day": 10,
+    "section_name": "Takeout",
+    "sales_category_name": "Alcohol",
+    "menu_category_name": "Beer",
+    "menu_item_name": "Muller Time Lager",
+    "records": 2,
+    "sales_revenue": 0,
+    "void_revenue": 9.5,
+    "quantity": 0,
+    "void_quantity": 2
+  },
+  {
+    "hour_of_day": 15,
+    "section_name": "Main",
+    "sales_category_name": "Food",
+    "menu_category_name": "Appetizers",
+    "menu_item_name": "Sweet Potato Fries",
+    "records": 2,
+    "sales_revenue": 6.5,
+    "void_revenue": 0,
+    "quantity": 2,
+    "void_quantity": 0
+  },
+  {
+    "hour_of_day": 9,
+    "section_name": "Main",
+    "sales_category_name": "Alcohol",
+    "menu_category_name": "Beer",
+    "menu_item_name": "Trent Dark Ale",
+    "records": 2,
+    "sales_revenue": 12.5,
+    "void_revenue": 0,
+    "quantity": 4,
+    "void_quantity": 0
+  },
+  {
+    "hour_of_day": 10,
+    "section_name": "Takeout",
+    "sales_category_name": "Food",
+    "menu_category_name": "Appetizers",
+    "menu_item_name": "House Salad",
+    "records": 1,
+    "sales_revenue": 0,
+    "void_revenue": 4,
+    "quantity": 0,
+    "void_quantity": 1
+  },
+  {
+    "hour_of_day": 13,
+    "section_name": "Cash Register",
+    "sales_category_name": "Food",
+    "menu_category_name": "Appetizers",
+    "menu_item_name": "House Salad",
+    "records": 1,
+    "sales_revenue": 4,
+    "void_revenue": 0,
+    "quantity": 1,
+    "void_quantity": 0
+  },
+  {
+    "hour_of_day": 13,
+    "section_name": "Cash Register",
+    "sales_category_name": "Food",
+    "menu_category_name": "Coffee",
+    "menu_item_name": "Latte",
+    "records": 1,
+    "sales_revenue": 4.5,
+    "void_revenue": 0,
+    "quantity": 1,
+    "void_quantity": 0
+  },
+  {
+    "hour_of_day": 13,
+    "section_name": "Cash Register",
+    "sales_category_name": "Food",
+    "menu_category_name": "Mains",
+    "menu_item_name": "Pulled Pork",
+    "records": 2,
+    "sales_revenue": 25.5,
+    "void_revenue": 0,
+    "quantity": 2,
+    "void_quantity": 0
+  },
+  {
+    "hour_of_day": 15,
+    "section_name": "Cash Register",
+    "sales_category_name": "Alcohol",
+    "menu_category_name": "Cocktails",
+    "menu_item_name": "Zombie",
+    "records": 1,
+    "sales_revenue": 9.99,
+    "void_revenue": 0,
+    "quantity": 1,
+    "void_quantity": 0
+  },
+  {
+    "hour_of_day": 15,
+    "section_name": "Main",
+    "sales_category_name": "Food",
+    "menu_category_name": "Mains",
+    "menu_item_name": "Pulled Pork",
+    "records": 2,
+    "sales_revenue": 114.75,
+    "void_revenue": 0,
+    "quantity": 9,
+    "void_quantity": 0
+  },
+  {
+    "hour_of_day": 13,
+    "section_name": "Cash Register",
+    "sales_category_name": "Alcohol",
+    "menu_category_name": "Beer",
+    "menu_item_name": "Muller Time Lager",
+    "records": 1,
+    "sales_revenue": 4.75,
+    "void_revenue": 0,
+    "quantity": 1,
+    "void_quantity": 0
+  },
+  {
+    "hour_of_day": 14,
+    "section_name": "Takeout",
+    "sales_category_name": "Alcohol",
+    "menu_category_name": "Beer",
+    "menu_item_name": "Trent Dark Ale",
+    "records": 1,
+    "sales_revenue": 6.25,
+    "void_revenue": 0,
+    "quantity": 1,
+    "void_quantity": 0
+  },
+  {
+    "hour_of_day": 14,
+    "section_name": "Takeout",
+    "sales_category_name": "Food",
+    "menu_category_name": "Appetizers",
+    "menu_item_name": "Loaded Nachos",
+    "records": 1,
+    "sales_revenue": 5,
+    "void_revenue": 0,
+    "quantity": 1,
+    "void_quantity": 0
+  },
+  {
+    "hour_of_day": 15,
+    "section_name": "Cash Register",
+    "sales_category_name": "Food",
+    "menu_category_name": "Vodka",
+    "menu_item_name": "SKVVY",
+    "records": 1,
+    "sales_revenue": 6,
+    "void_revenue": 0,
+    "quantity": 1,
+    "void_quantity": 0
+  },
+  {
+    "hour_of_day": 15,
+    "section_name": "Main",
+    "sales_category_name": "Alcohol",
+    "menu_category_name": "Beer",
+    "menu_item_name": "Old Trog IPA",
+    "records": 1,
+    "sales_revenue": 5.97,
+    "void_revenue": 0,
+    "quantity": 1,
+    "void_quantity": 0
+  },
+  {
+    "hour_of_day": 11,
+    "section_name": "Main",
+    "sales_category_name": "Alcohol",
+    "menu_category_name": "Cocktails",
+    "menu_item_name": "Singapore Sling",
+    "records": 1,
+    "sales_revenue": 12.55,
+    "void_revenue": 0,
+    "quantity": 1,
+    "void_quantity": 0
+  },
+  {
+    "hour_of_day": 11,
+    "section_name": "Takeout",
+    "sales_category_name": "Food",
+    "menu_category_name": "Coffee",
+    "menu_item_name": "Espresso",
+    "records": 1,
+    "sales_revenue": 1.4,
+    "void_revenue": 0,
+    "quantity": 1,
+    "void_quantity": 0
+  },
+  {
+    "hour_of_day": 14,
+    "section_name": "Takeout",
+    "sales_category_name": "Food",
+    "menu_category_name": "Vodka",
+    "menu_item_name": "SKVVY",
+    "records": 1,
+    "sales_revenue": 6,
+    "void_revenue": 0,
+    "quantity": 1,
+    "void_quantity": 0
+  }
+]
+```
+
+Attribute | Description | Type
+----- | ----- | -----
+hour_of_day | Hour the sale was made, based on a 24 hour clock (e.g., 2 pm is returned as 14) | int
+section_name | Name of the section this item was sold in | string
+sales_category_name | Name of the sales category this item is under.| string
+menu_category_name | Name of the menu this item is under.| string
+menu_item_name | The menu item's name. | string
+records | The number of these items ordered (sold or voided) in the hour | int
+sales_revenue | Total before tax sales accrued for that menu item. | decimal
+void_revenue | The total value of this item voided. | decimal
+quantity | The total number of this item sold. | int
+void_quantity | The total number of this item voided. | int
+
 
 
 # Index
