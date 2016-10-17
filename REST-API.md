@@ -757,7 +757,7 @@ Attribute | Description | Type
 hour_of_day | Hour the sale was made, based on a 24 hour clock (e.g., 2 pm is returned as 14) | int
 section_name | Name of the section this item was sold in | string
 sales_category_name | Name of the sales category this item is under.| string
-menu_category_name | Name of the menu this item is under.| string
+menu_category_name | Name of the menu category this item is under.| string
 menu_item_name | The menu item's name. | string
 records | The number of these items ordered (sold or voided) in the hour | int
 sales_revenue | Total before tax sales accrued for that menu item. | decimal
