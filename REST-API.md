@@ -184,9 +184,9 @@ This API requires an authentication token which is passed in as a query paramete
 
 #### Params
 
-* `<id>`: The unique identifier for your restaurant. This will be provided to you by TouchBistro.
 * `<datetime>`: A datetime stamp in the UNX format (e.g., 1471219200)
 * `<api_token>`: The unique API Token associated with your TouchBistro Dev account. This will be provided to you by TouchBistro.
+* `<id>`: The unique identifier for your restaurant. This will be provided to you by TouchBistro.
 
 ### Response
 
@@ -253,13 +253,14 @@ labor_cost | The cost of labor total for the shift | decimal
 This API requires an authentication token which is passed in as a query parameter. As a result, the request must be sent over HTTPS.
 
 ### Request
-```GET https://cloud.touchbistro.com/cloud/reporting/dashboard?start=<datetime>&end=<datetime>&report=dashboard&authentication_token=<api_token>```
+```GET https://cloud.touchbistro.com/cloud/reporting/dashboard?start=<datetime>&end=<datetime>&report=dashboard&authentication_token=<api_token>&restaurant_id=<id>```
 
 #### Params
 
-* `<id>`: The unique identifier for your restaurant. This will be provided to you by TouchBistro.
 * `<datetime>`: A datetime stamp in the UNX format (e.g., 1471219200)
 * `<api_token>`: The unique API Token associated with your TouchBistro Dev account. This will be provided to you by TouchBistro.
+* `<id>`: The unique identifier for your restaurant. This will be provided to you by TouchBistro.
+
 
 ### Response
 
@@ -485,12 +486,14 @@ Attribute | Description | Type
 ----- | ----- | -----
 sales_revenue | Sales total before taxes for the given time period. | float
 tip_revenue | Tips recorded for the given time period. This will not include cash tips. | float
+
 ##### Customers
 Attribute | Description | Type
 ----- | ----- | -----
 parties | The number of parties sat for the given time period (i.e., the number of orders) | int
 bills | The number of guest checks issued for the given time period. Bill number will be higher than party number if tables/orders split into separate bills. | int
 seats | The number of individuals served for the given time period. | string
+
 ##### Average Spend
 Attribute | Description | Type
 ----- | ----- | -----
@@ -503,6 +506,7 @@ Attribute | Description | Type
 sales_category_name | Name of the sales category. | string
 sales_revenue | Total before tax sales accrued for menu items under that sales category. | float
 quantity | The number of menu items sold under the sales category. | int
+
 ##### Tender Types
 Attribute | Description | Type
 ----- | ----- | -----
@@ -515,6 +519,7 @@ Attribute | Description | Type
 menu_category_name | Menu category name | string
 sales_revenue | Total before tax sales accrued for menu items under that menu category. | float
 quantity | The number of menu items sold under the menu category. | int
+
 ##### Top Menu Items
 Attribute | Description | Type
 ----- | ----- | -----
