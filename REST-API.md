@@ -484,7 +484,7 @@ This API requires an authentication token which is passed in as a query paramete
 ##### Sales
 Attribute | Description | Type
 ----- | ----- | -----
-sales_revenue | Sales total before taxes for the given time period. | float
+sales_revenue | Sales total before taxes for the given time period. | decimal
 tip_revenue | Tips recorded for the given time period. This will not include cash tips. | float
 
 ##### Customers
@@ -497,35 +497,35 @@ seats | The number of individuals served for the given time period. | string
 ##### Average Spend
 Attribute | Description | Type
 ----- | ----- | -----
-average_spend_per_party | Sales revenue divided by parties. | float
-average_spend_per_bill | Sales revenue divided by bills issued. | float
-average_spend_per_seat | Sales revenue divided by seats. | float
+average_spend_per_party | Sales revenue divided by parties. | decimal
+average_spend_per_bill | Sales revenue divided by bills issued. | decimal
+average_spend_per_seat | Sales revenue divided by seats. | decimal
 ##### Top Sales Categories
 Attribute | Description | Type
 ----- | ----- | -----
 sales_category_name | Name of the sales category. | string
-sales_revenue | Total before tax sales accrued for menu items under that sales category. | float
+sales_revenue | Total before tax sales accrued for menu items under that sales category. | decimal
 quantity | The number of menu items sold under the sales category. | int
 
 ##### Tender Types
 Attribute | Description | Type
 ----- | ----- | -----
 payment_method_name | Type of payment (cash, credit card name, etc.) | string
-sales_total | Total before tax sales paid via the payment method. | float
+sales_total | Total before tax sales paid via the payment method. | decimal
 RecordCount | The number of bills paid or partially paid with the payment type. | int
 ##### Top Menu Categories
 Attribute | Description | Type
 ----- | ----- | -----
 menu_category_name | Menu category name | string
-sales_revenue | Total before tax sales accrued for menu items under that menu category. | float
+sales_revenue | Total before tax sales accrued for menu items under that menu category. | decimal
 quantity | The number of menu items sold under the menu category. | int
 
 ##### Top Menu Items
 Attribute | Description | Type
 ----- | ----- | -----
 menu_item_name | Menu item name. | string
-sales_revenue |  Total before tax sales accrued for that menu item | float
-quantity | The number of the menu items sold | float
+sales_revenue |  Total before tax sales accrued for that menu item | decimal
+quantity | The number of the menu items sold | decimal
 record_count | The number of these items ordered, including voided items. | int
 
 
