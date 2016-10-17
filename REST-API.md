@@ -423,7 +423,7 @@ This API requires an authentication token which is passed in as a query paramete
     {
       "menu_item_name": "Fries",
       "sales_revenue": 12,
-      "quantity": 6,
+      "quantity": 4,
       "record_count": 6
     },
     {
@@ -466,7 +466,7 @@ This API requires an authentication token which is passed in as a query paramete
       "menu_item_name": "Trent Dark Ale",
       "sales_revenue": 6.25,
       "quantity": 1,
-      "record_count": 1
+      "record_count": 2
     },
     {
       "menu_item_name": "Stolkan",
