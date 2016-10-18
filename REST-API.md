@@ -19,6 +19,7 @@ Endpoint | Description
 [Time of Day](#TimeofDay) | Retrieve the time of day ("heat map") report
 [Discounts and Voids](#Discounts) | Retrieve the discounts and voids report 
 [Tips](#Tips) | Retrieve the tips report 
+[Items](#Items) | Retrieve the items report 
 [Shifts](#shifts) | Retrieve shifts, including labor costs
 
 ## <a name="menu"></a>Menu
@@ -1858,6 +1859,125 @@ payment_method_name | The method used to pay. | string
 total_applied | The pre-tip/pre-tax total of the bills paid with the payment method. | decimal
 total_tip | The total tips charged to the payment method. | decimal
 record_count | The number of bills that were paid with this payment method. | int
+
+## <a name="Items"></a>Items
+
+### Authentication
+
+This API requires an authentication token which is passed in as a query parameter. As a result, the request must be sent over HTTPS.
+
+### Request
+```GET https://cloud.touchbistro.com/cloud/reporting/waiter-items?start=<datetime>&end=<datetime>&report=waiter-items&authentication_token=<api_token>&restaurant_id=<id>```
+
+#### Params
+
+* `<datetime>`: A datetime stamp in the UNX format (e.g., 1471219200)
+* `<api_token>`: The unique API Token associated with your TouchBistro Dev account. This will be provided to you by TouchBistro.
+* `<id>`: The unique identifier for your restaurant. This will be provided to you by TouchBistro.
+
+
+### Response
+
+```
+[
+  {
+    "waiter_name": "Lucy",
+    "menu_item_name": "Apple Pie",
+    "sales_category_name": "Food",
+    "menu_category_name": "Desserts",
+    "sales_revenue": 3.75,
+    "void_revenue": 0,
+    "discount_revenue": 0,
+    "quantity": 1,
+    "void_quantity": 0,
+    "record_count": 1
+  },
+  {
+    "waiter_name": "Lucy",
+    "menu_item_name": "Bacon Burger",
+    "sales_category_name": "Food",
+    "menu_category_name": "Mains",
+    "sales_revenue": 36.5,
+    "void_revenue": 0,
+    "discount_revenue": 0,
+    "quantity": 2,
+    "void_quantity": 0,
+    "record_count": 2
+  },
+  {
+    "waiter_name": "Lucy",
+    "menu_item_name": "Fries",
+    "sales_category_name": "Food",
+    "menu_category_name": "Appetizers",
+    "sales_revenue": 6,
+    "void_revenue": 0,
+    "discount_revenue": 0,
+    "quantity": 3,
+    "void_quantity": 0,
+    "record_count": 3
+  },
+{
+    "waiter_name": "Mary S.",
+    "menu_item_name": "Fudge Brownie",
+    "sales_category_name": "Food",
+    "menu_category_name": "Desserts",
+    "sales_revenue": 5.56,
+    "void_revenue": 5.56,
+    "discount_revenue": 0,
+    "quantity": 1,
+    "void_quantity": 1,
+    "record_count": 2
+  },
+{
+    "waiter_name": "Mary S.",
+    "menu_item_name": "Trent Dark Ale",
+    "sales_category_name": "Alcohol",
+    "menu_category_name": "Beer",
+    "sales_revenue": 18.75,
+    "void_revenue": 6.25,
+    "discount_revenue": 12.5,
+    "quantity": 5.0,
+    "void_quantity": 1.0,
+    "record_count": 4
+},
+{
+    "waiter_name": "Mary S.",
+    "menu_item_name": "Pulled Pork",
+    "sales_category_name": "Food",
+    "menu_category_name": "Mains",
+    "sales_revenue": 25.5,
+    "void_revenue": 12.75,
+    "discount_revenue": 0,
+    "quantity": 2,
+    "void_quantity": 1,
+    "record_count": 3
+  }  {
+    "waiter_name": "Mary S.",
+    "menu_item_name": "Tea",
+    "sales_category_name": "Food",
+    "menu_category_name": "Coffee",
+    "sales_revenue": 1.25,
+    "void_revenue": 0,
+    "discount_revenue": 0,
+    "quantity": 1,
+    "void_quantity": 0,
+    "record_count": 1
+  }
+]
+```
+
+Attribute | Description | Type
+----- | ----- | -----
+waiter_name | The waiter name. | string
+menu_item_name | The menu item the waiter has sold. | string
+sales_category_name | The sales category the item is under. | string
+menu_category_name | The menu categories (“mains”, “appetizers”, etc.) the item is under. | string
+sales_revenue | The total sales the waiter generated for that menu item. If discounts or voids were applied, this figure will represent the sales realized after the discounts and voids. | decimal
+void_revenue | The total dollar amount of the void. | decimal
+discount_revenue | The total amount of the discount the waiter applied to that menu item. | decimal
+quantity | The total number of the items discounted by the waiter. | int
+void_quantity | The total number of times this item was voided. | int
+record_count | The total number of the item sold by the waiter. | int
 
 
 
