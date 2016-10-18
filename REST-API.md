@@ -16,6 +16,7 @@ Endpoint | Description
 [Payments](#Payments) | Retrieve the payments report
 [Sales by Section](#SalesbySection) | Retrieve the sales by section report
 [Order Type](#OrderType) | Retrieve the order type report
+[Time of Day](#TimeofDay) | Retrieve the Time of Day ("heat map") report
 [Shifts](#shifts) | Retrieve shifts, including labor costs
 
 ## <a name="menu"></a>Menu
@@ -1379,6 +1380,319 @@ void_revenue | The total value of this item voided. | decimal
 discount_revenue | The total value of this item discounted. | decimal
 quantity | The total number of this item sold. | int
 void_quantity | The total number of this item voided. | int
+
+## <a name="TimeofDay"></a>Time of Day
+
+### Authentication
+
+This API requires an authentication token which is passed in as a query parameter. As a result, the request must be sent over HTTPS.
+
+### Request
+```GET https://cloud.touchbistro.com/cloud/reporting/time-of-day?start=<datetime>&end=<datetime>&report=time-of-day&authentication_token=<api_token>&restaurant_id=<id>```
+
+#### Params
+
+* `<datetime>`: A datetime stamp in the UNX format (e.g., 1471219200)
+* `<api_token>`: The unique API Token associated with your TouchBistro Dev account. This will be provided to you by TouchBistro.
+* `<id>`: The unique identifier for your restaurant. This will be provided to you by TouchBistro.
+
+### Response
+
+```
+[
+  {
+    "sales_revenue": 402.63,
+    "quantity": 49,
+    "void_revenue": 0,
+    "void_quantity": 1,
+    "day_of_week": 1,
+    "hour_of_day": 11
+  },
+  {
+    "sales_revenue": 333.73,
+    "quantity": 49,
+    "void_revenue": 2.65,
+    "void_quantity": 6,
+    "day_of_week": 1,
+    "hour_of_day": 12
+  },
+  {
+    "sales_revenue": 465.475,
+    "quantity": 63,
+    "void_revenue": 0,
+    "void_quantity": 1,
+    "day_of_week": 1,
+    "hour_of_day": 14
+  },
+  {
+    "sales_revenue": 178.72,
+    "quantity": 19,
+    "void_revenue": 0,
+    "void_quantity": 0,
+    "day_of_week": 1,
+    "hour_of_day": 16
+  },
+  {
+    "sales_revenue": 5,
+    "quantity": 1,
+    "void_revenue": 0,
+    "void_quantity": 0,
+    "day_of_week": 3,
+    "hour_of_day": 10
+  },
+  {
+    "sales_revenue": 24.97,
+    "quantity": 8,
+    "void_revenue": 45.08,
+    "void_quantity": 4,
+    "day_of_week": 3,
+    "hour_of_day": 11
+  },
+  {
+    "sales_revenue": 20.3125,
+    "quantity": 2,
+    "void_revenue": 14.25,
+    "void_quantity": 3,
+    "day_of_week": 3,
+    "hour_of_day": 12
+  },
+  {
+    "sales_revenue": 451.53,
+    "quantity": 49,
+    "void_revenue": 0,
+    "void_quantity": 3,
+    "day_of_week": 3,
+    "hour_of_day": 13
+  },
+  {
+    "sales_revenue": 30.24,
+    "quantity": 5,
+    "void_revenue": 5,
+    "void_quantity": 1,
+    "day_of_week": 3,
+    "hour_of_day": 15
+  },
+  {
+    "sales_revenue": 38.57,
+    "quantity": 9,
+    "void_revenue": 0,
+    "void_quantity": 0,
+    "day_of_week": 3,
+    "hour_of_day": 17
+  },
+  {
+    "sales_revenue": 64.2,
+    "quantity": 11,
+    "void_revenue": 0,
+    "void_quantity": 0,
+    "day_of_week": 3,
+    "hour_of_day": 21
+  },
+  {
+    "sales_revenue": 20,
+    "quantity": 4,
+    "void_revenue": 0,
+    "void_quantity": 0,
+    "day_of_week": 4,
+    "hour_of_day": 10
+  },
+  {
+    "sales_revenue": 257.64,
+    "quantity": 18,
+    "void_revenue": 0,
+    "void_quantity": 12,
+    "day_of_week": 4,
+    "hour_of_day": 11
+  },
+  {
+    "sales_revenue": 8.25,
+    "quantity": 2,
+    "void_revenue": 0,
+    "void_quantity": 1,
+    "day_of_week": 4,
+    "hour_of_day": 12
+  },
+  {
+    "sales_revenue": 1551.54,
+    "quantity": 190,
+    "void_revenue": 0,
+    "void_quantity": 6,
+    "day_of_week": 4,
+    "hour_of_day": 13
+  },
+  {
+    "sales_revenue": 429.08,
+    "quantity": 64,
+    "void_revenue": 0,
+    "void_quantity": 1,
+    "day_of_week": 4,
+    "hour_of_day": 14
+  },
+  {
+    "sales_revenue": 1369.51,
+    "quantity": 165,
+    "void_revenue": 0,
+    "void_quantity": 0,
+    "day_of_week": 4,
+    "hour_of_day": 15
+  },
+  {
+    "sales_revenue": 68.58,
+    "quantity": 14,
+    "void_revenue": 3.99,
+    "void_quantity": 1,
+    "day_of_week": 4,
+    "hour_of_day": 16
+  },
+  {
+    "sales_revenue": 71.86,
+    "quantity": 14,
+    "void_revenue": 0,
+    "void_quantity": 1,
+    "day_of_week": 4,
+    "hour_of_day": 18
+  },
+  {
+    "sales_revenue": 180.78,
+    "quantity": 29,
+    "void_revenue": 0,
+    "void_quantity": 0,
+    "day_of_week": 4,
+    "hour_of_day": 20
+  },
+  {
+    "sales_revenue": 33,
+    "quantity": 4,
+    "void_revenue": 0,
+    "void_quantity": 0,
+    "day_of_week": 4,
+    "hour_of_day": 21
+  },
+  {
+    "sales_revenue": 16.7,
+    "quantity": 3,
+    "void_revenue": 6,
+    "void_quantity": 1,
+    "day_of_week": 4,
+    "hour_of_day": 23
+  },
+  {
+    "sales_revenue": 20.7,
+    "quantity": 4,
+    "void_revenue": 0,
+    "void_quantity": 0,
+    "day_of_week": 5,
+    "hour_of_day": 0
+  },
+  {
+    "sales_revenue": 143.04,
+    "quantity": 18,
+    "void_revenue": 0,
+    "void_quantity": 12,
+    "day_of_week": 5,
+    "hour_of_day": 9
+  },
+  {
+    "sales_revenue": 313.49,
+    "quantity": 40,
+    "void_revenue": 0,
+    "void_quantity": 0,
+    "day_of_week": 5,
+    "hour_of_day": 10
+  },
+  {
+    "sales_revenue": 43.75,
+    "quantity": 9,
+    "void_revenue": 4,
+    "void_quantity": 1,
+    "day_of_week": 5,
+    "hour_of_day": 13
+  },
+  {
+    "sales_revenue": 37.6,
+    "quantity": 5,
+    "void_revenue": 0,
+    "void_quantity": 0,
+    "day_of_week": 5,
+    "hour_of_day": 14
+  },
+  {
+    "sales_revenue": 107.23,
+    "quantity": 8,
+    "void_revenue": 0,
+    "void_quantity": 1,
+    "day_of_week": 5,
+    "hour_of_day": 16
+  },
+  {
+    "sales_revenue": 103.61,
+    "quantity": 20,
+    "void_revenue": 0,
+    "void_quantity": 0,
+    "day_of_week": 5,
+    "hour_of_day": 18
+  },
+  {
+    "sales_revenue": 88.15,
+    "quantity": 21,
+    "void_revenue": 0,
+    "void_quantity": 14,
+    "day_of_week": 5,
+    "hour_of_day": 21
+  },
+  {
+    "sales_revenue": 51.23,
+    "quantity": 3,
+    "void_revenue": 0,
+    "void_quantity": 1,
+    "day_of_week": 5,
+    "hour_of_day": 23
+  },
+  {
+    "sales_revenue": 0,
+    "quantity": 0,
+    "void_revenue": 27.08,
+    "void_quantity": 5,
+    "day_of_week": 6,
+    "hour_of_day": 9
+  },
+  {
+    "sales_revenue": 0,
+    "quantity": 0,
+    "void_revenue": 125.8,
+    "void_quantity": 16,
+    "day_of_week": 6,
+    "hour_of_day": 10
+  },
+  {
+    "sales_revenue": 127.22,
+    "quantity": 12,
+    "void_revenue": 0,
+    "void_quantity": 0,
+    "day_of_week": 6,
+    "hour_of_day": 15
+  },
+  {
+    "sales_revenue": 28,
+    "quantity": 3,
+    "void_revenue": 0,
+    "void_quantity": 0,
+    "day_of_week": 6,
+    "hour_of_day": 23
+  }
+]
+```
+
+Attribute | Description | Type
+----- | ----- | -----
+sales_revenue | Sales total before taxes for the given day and hour block. | decimal
+quantity | Number of menu items sold. | int
+void_revenue | Value of items voided and not sold. | decimal
+void_quantity | Number of items voided. | int
+day_of_week | Number representing the day of the week. Sunday=1. Monday=2. And so on. | int
+hour_of_day | Hour the sale was made, based on a 24-hour clock (e.g., 2 pm is returned as 14). | int
+
+
 
 
 # Index
