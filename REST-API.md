@@ -18,6 +18,7 @@ Endpoint | Description
 [Order Type](#OrderType) | Retrieve the order type report
 [Time of Day](#TimeofDay) | Retrieve the time of day ("heat map") report
 [Discounts and Voids](#Discounts) | Retrieve the discounts and voids report 
+[Tips](#Tips) | Retrieve the tips report 
 [Shifts](#shifts) | Retrieve shifts, including labor costs
 
 ## <a name="menu"></a>Menu
@@ -1791,6 +1792,72 @@ void_revenue | The amount voided. | decimal
 discount_revenue | The amount of the discount applied. | decimal
 quantity | The number of discounts applied. This may be greater than 1 if you discounted multiple menu items of same type (added using the Quantity option) on the same bill. | int
 void_quantity | The number of the items voided on the bill. If more than one of the same item was voided on a bill, this number will be greater than zero. For example, if two Singapore Sling drinks were added to an order, sent, and then voided, Void Quantity would be 2. | int
+
+
+## <a name="Tips"></a>Tips
+
+### Authentication
+
+This API requires an authentication token which is passed in as a query parameter. As a result, the request must be sent over HTTPS.
+
+### Request
+```GET https://cloud.touchbistro.com/cloud/reporting/waiter-tips?start=<datetime>&end=<datetime>&report=waiter-tips&authentication_token=<api_token>&restaurant_id=<id>```
+
+#### Params
+
+* `<datetime>`: A datetime stamp in the UNX format (e.g., 1471219200)
+* `<api_token>`: The unique API Token associated with your TouchBistro Dev account. This will be provided to you by TouchBistro.
+* `<id>`: The unique identifier for your restaurant. This will be provided to you by TouchBistro.
+
+
+### Response
+
+```
+[
+  {
+    "waiter_name": "Lucy",
+    "payment_method_name": "AMEX",
+    "total_applied": 118.5,
+    "total_tip": 19.13,
+    "record_count": 2
+  },
+  {
+    "waiter_name": "Lucy",
+    "payment_method_name": "Cash",
+    "total_applied": 390.96,
+    "total_tip": 0,
+    "record_count": 11
+  },
+  {
+    "waiter_name": "Mary S.",
+    "payment_method_name": "Cash",
+    "total_applied": 220.34,
+    "total_tip": 0,
+    "record_count": 1
+  },
+  {
+    "waiter_name": "Lucy",
+    "payment_method_name": "MasterCard",
+    "total_applied": 85.37,
+    "total_tip": 16.94,
+    "record_count": 3
+  },
+  {
+    "waiter_name": "Lucy",
+    "payment_method_name": "Visa",
+    "total_applied": 294.98,
+    "total_tip": 53.1,
+    "record_count": 1
+  }
+]```
+
+Attribute | Description | Type
+----- | ----- | -----
+waiter_name | The waiter name. | string
+payment_method_name | The method used to pay. | string
+total_applied | The pre-tip/pre-tax total of the bills paid with the payment method. | decimal
+total_tip | The total tips charged to the payment method. | decimal
+record_count | The number of bills that were paid with this payment method. | int
 
 
 
