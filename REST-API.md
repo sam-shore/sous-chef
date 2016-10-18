@@ -1850,7 +1850,8 @@ This API requires an authentication token which is passed in as a query paramete
     "total_tip": 53.1,
     "record_count": 1
   }
-]```
+]
+```
 
 Attribute | Description | Type
 ----- | ----- | -----
