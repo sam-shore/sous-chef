@@ -15,6 +15,7 @@ Endpoint | Description
 [Menu Item Sales](#MenuItemSales) | Retrieve the menu item sales report
 [Payments](#Payments) | Retrieve the payments report
 [Sales by Section](#SalesbySection) | Retrieve the sales by section report
+[Order Type](#OrderType) | Retrieve the order type report
 [Shifts](#shifts) | Retrieve shifts, including labor costs
 
 ## <a name="menu"></a>Menu
@@ -1214,6 +1215,170 @@ void_revenue | Total value of voids authorized under this section. | float
 discount_revenue | Total value of discounts given under this section. | float
 quantity | Total number of menu items billed in this section. | int
 void_quantity | Total number of voids authorized in this section. This does not include discounts. | int
+
+## <a name="OrderType"></a>Order Type
+
+### Authentication
+
+This API requires an authentication token which is passed in as a query parameter. As a result, the request must be sent over HTTPS.
+
+### Request
+```GET https://cloud.touchbistro.com/cloud/reporting/sales-by-menu-category?start=<datetime>&end=<datetime>&report=sales-by-menu-category&authentication_token=<api_token>&restaurant_id=<id>```
+
+#### Params
+
+* `<datetime>`: A datetime stamp in the UNX format (e.g., 1471219200)
+* `<api_token>`: The unique API Token associated with your TouchBistro Dev account. This will be provided to you by TouchBistro.
+* `<id>`: The unique identifier for your restaurant. This will be provided to you by TouchBistro.
+
+
+### Response
+
+```
+[
+  {
+    "day": "2016-09-06",
+    "take_out_type": "dinein",
+    "records": 9,
+    "sales_revenue": 62.74,
+    "void_revenue": 12.95,
+    "discount_revenue": 0,
+    "quantity": 8,
+    "void_quantity": 1
+  },
+  {
+    "day": "2016-09-07",
+    "take_out_type": "bartab",
+    "records": 3,
+    "sales_revenue": 20.65,
+    "void_revenue": 0,
+    "discount_revenue": 0,
+    "quantity": 3,
+    "void_quantity": 0
+  },
+  {
+    "day": "2016-09-08",
+    "take_out_type": "bartab",
+    "records": 5,
+    "sales_revenue": 37.6,
+    "void_revenue": 0,
+    "discount_revenue": 0,
+    "quantity": 5,
+    "void_quantity": 0
+  },
+  {
+    "day": "2016-09-08",
+    "take_out_type": "dinein",
+    "records": 18,
+    "sales_revenue": 143.04,
+    "void_revenue": 0,
+    "discount_revenue": 12.5,
+    "quantity": 18,
+    "void_quantity": 0
+  },
+  {
+    "day": "2016-09-09",
+    "take_out_type": "bartab",
+    "records": 20,
+    "sales_revenue": 0,
+    "void_revenue": 152.88,
+    "discount_revenue": 0,
+    "quantity": 0,
+    "void_quantity": 20
+  },
+  {
+    "day": "2016-09-11",
+    "take_out_type": "bartab",
+    "records": 31,
+    "sales_revenue": 216.91,
+    "void_revenue": 0,
+    "discount_revenue": 0,
+    "quantity": 31,
+    "void_quantity": 0
+  },
+  {
+    "day": "2016-09-11",
+    "take_out_type": "delivery",
+    "records": 22,
+    "sales_revenue": 109.71,
+    "void_revenue": 0,
+    "discount_revenue": 0,
+    "quantity": 22,
+    "void_quantity": 0
+  },
+  {
+    "day": "2016-09-11",
+    "take_out_type": "takeout",
+    "records": 17,
+    "sales_revenue": 196.66,
+    "void_revenue": 0,
+    "discount_revenue": 0,
+    "quantity": 17,
+    "void_quantity": 0
+  },
+  {
+    "day": "2016-09-13",
+    "take_out_type": "takeout",
+    "records": 4,
+    "sales_revenue": 5.65,
+    "void_revenue": 0,
+    "discount_revenue": 0,
+    "quantity": 4,
+    "void_quantity": 0
+  },
+  {
+    "day": "2016-09-14",
+    "take_out_type": "delivery",
+    "records": 5,
+    "sales_revenue": 33.49,
+    "void_revenue": 0,
+    "discount_revenue": 0,
+    "quantity": 5,
+    "void_quantity": 0
+  },
+  {
+    "day": "2016-09-14",
+    "take_out_type": "dinein",
+    "records": 428,
+    "sales_revenue": 3805.16,
+    "void_revenue": 6,
+    "discount_revenue": 6,
+    "quantity": 470,
+    "void_quantity": 1
+  },
+  {
+    "day": "2016-09-15",
+    "take_out_type": "delivery",
+    "records": 12,
+    "sales_revenue": 42.99,
+    "void_revenue": 0,
+    "discount_revenue": 0,
+    "quantity": 12,
+    "void_quantity": 0
+  },
+  {
+    "day": "2016-09-15",
+    "take_out_type": "dinein",
+    "records": 65,
+    "sales_revenue": 664.47,
+    "void_revenue": 4,
+    "discount_revenue": 37.5,
+    "quantity": 89,
+    "void_quantity": 1
+  },
+]
+```
+
+Attribute | Description | Type
+----- | ----- | -----
+day | Sales day | string
+take_out_type | The order type. | string
+records | The number of items ordered (sold or voided) for the sales day. | int
+sales_revenue | Total before tax sales accrued for order.| decimal
+void_revenue | The total value of this item voided. | decimal
+discount_revenue | The total value of this item discounted. | decimal
+quantity | The total number of this item sold. | int
+void_quantity | The total number of this item voided. | int
 
 
 # Index
