@@ -1223,7 +1223,7 @@ void_quantity | Total number of voids authorized in this section. This does not 
 This API requires an authentication token which is passed in as a query parameter. As a result, the request must be sent over HTTPS.
 
 ### Request
-```GET https://cloud.touchbistro.com/cloud/reporting/sales-by-menu-category?start=<datetime>&end=<datetime>&report=sales-by-menu-category&authentication_token=<api_token>&restaurant_id=<id>```
+```GET https://cloud.touchbistro.com/cloud/reporting/order-type?start=<datetime>&end=<datetime>&report=order-type&authentication_token=<api_token>&restaurant_id=<id>```
 
 #### Params
 
