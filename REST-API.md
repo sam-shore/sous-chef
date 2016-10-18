@@ -16,7 +16,8 @@ Endpoint | Description
 [Payments](#Payments) | Retrieve the payments report
 [Sales by Section](#SalesbySection) | Retrieve the sales by section report
 [Order Type](#OrderType) | Retrieve the order type report
-[Time of Day](#TimeofDay) | Retrieve the Time of Day ("heat map") report
+[Time of Day](#TimeofDay) | Retrieve the time of day ("heat map") report
+[Discounts and Voids](#Discounts) | Retrieve the discounts and voids report 
 [Shifts](#shifts) | Retrieve shifts, including labor costs
 
 ## <a name="menu"></a>Menu
@@ -1692,6 +1693,104 @@ void_quantity | Number of items voided. | int
 day_of_week | Number representing the day of the week. Sunday=1. Monday=2. And so on. | int
 hour_of_day | Hour the sale was made, based on a 24-hour clock (e.g., 2 pm is returned as 14). | int
 
+
+## <a name="Discounts"></a>Discounts and Voids
+
+### Authentication
+
+This API requires an authentication token which is passed in as a query parameter. As a result, the request must be sent over HTTPS.
+
+### Request
+```GET https://cloud.touchbistro.com/cloud/reporting/discounts?start=<datetime>&end=<datetime>&report=discounts&authentication_token=<api_token>&restaurant_id=<id>```
+
+#### Params
+
+* `<datetime>`: A datetime stamp in the UNX format (e.g., 1471219200)
+* `<api_token>`: The unique API Token associated with your TouchBistro Dev account. This will be provided to you by TouchBistro.
+* `<id>`: The unique identifier for your restaurant. This will be provided to you by TouchBistro.
+
+### Response
+
+```
+[
+  {
+    "waiter_name": "John H.",
+    "manager_name": "Cam P.",
+    "discounted_at_local": "2016-09-27T15:21:28.000+00:00",
+    "discount_description": "Mistake",
+    "menu_item_price": 5,
+    "menu_item_name": "Loaded Nachos",
+    "sales_category_name": "Food",
+    "menu_category_name": "Appetizers",
+    "sales_revenue": 0,
+    "void_revenue": 5,
+    "discount_revenue": 0,
+    "quantity": 0,
+    "void_quantity": 1
+  },
+ {
+    "waiter_name": "Frank R.",
+    "manager_name": "Admin",
+    "discounted_at_local": "2016-09-20T11:57:40.000+00:00",
+    "discount_description": "Coupon",
+    "menu_item_price": 4,
+    "menu_item_name": "House Salad",
+    "sales_category_name": "Food",
+    "menu_category_name": "Appetizers",
+    "sales_revenue": 1,
+    "void_revenue": 0,
+    "discount_revenue": 3,
+    "quantity": 1,
+    "void_quantity": 0
+  },
+  {
+    "waiter_name": "Mary S.",
+    "manager_name": "Admin",
+    "discounted_at_local": "2016-10-17T10:25:43.000+00:00",
+    "discount_description": "Mistake",
+    "menu_item_price": 5.56,
+    "menu_item_name": "Fudge Brownie",
+    "sales_category_name": "Food",
+    "menu_category_name": "Desserts",
+    "sales_revenue": 0,
+    "void_revenue": 5.56,
+    "discount_revenue": 0,
+    "quantity": 0,
+    "void_quantity": 1
+  },
+  {
+    "waiter_name": "Mary S.",
+    "manager_name": "Admin",
+    "discounted_at_local": "2016-10-17T13:09:33.000+00:00",
+    "discount_description": "Mistake",
+    "menu_item_price": 12.75,
+    "menu_item_name": "Pulled Pork",
+    "sales_category_name": "Food",
+    "menu_category_name": "Mains",
+    "sales_revenue": 0,
+    "void_revenue": 12.75,
+    "discount_revenue": 0,
+    "quantity": 0,
+    "void_quantity": 1
+  }
+]
+```
+
+Attribute | Description | Type
+----- | ----- | -----
+waiter_name | The waiter that issued the void or discount. | string
+manager_name | The manager or admin that approved the void or discount. | string
+discounted_at_local | The date of the discount. | string
+discount_description | The void or discount applied. If the item has two discounts (for example a 25% off birthday discount and a $2 coupon discount), each discount will appear as a separate object. | string
+menu_item_price | The price of the item discounted or voided. | decimal
+menu_item_name | The menu item that was discounted. | string
+sales_category_name | The sales category the voided or discounted item is under. | string
+menu_category_name | The menu category the voided or discounted item is under. | string
+sales_revenue | The actual sale amount realized after the discount. This will be 0 for voids. | decimal
+void_revenue | The amount voided. | decimal
+discount_revenue | The amount of the discount applied. | decimal
+quantity | The number of discounts applied. This may be greater than 1 if you discounted multiple menu items of same type (added using the Quantity option) on the same bill. | int
+void_quantity | The number of the items voided on the bill. If more than one of the same item was voided on a bill, this number will be greater than zero. For example, if two Singapore Sling drinks were added to an order, sent, and then voided, Void Quantity would be 2. | int
 
 
 
