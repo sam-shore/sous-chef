@@ -21,6 +21,7 @@ Endpoint | Description
 [Tips](#Tips) | Retrieve the tips report 
 [Items](#Items) | Retrieve the items report 
 [Shifts](#shifts) | Retrieve shifts, including labor costs
+[Tax Summary](#Tax) | Retrieve the tax summary report
 
 ## <a name="menu"></a>Menu
 
@@ -1979,6 +1980,53 @@ discount_revenue | The total amount of the discount the waiter applied to that m
 quantity | The total number of the items discounted by the waiter. | int
 void_quantity | The total number of times this item was voided. | int
 record_count | The total number of the item sold by the waiter. | int
+
+## <a name="Tax"></a>Tax Summary
+
+### Authentication
+
+This API requires an authentication token which is passed in as a query parameter. As a result, the request must be sent over HTTPS.
+
+### Request
+```GET https://cloud.touchbistro.com/cloud/reporting/tax-summary?start=<datetime>&end=<datetime>&report=tax-summary&authentication_token=<api_token>&restaurant_id=<id>```
+
+#### Params
+
+* `<datetime>`: A datetime stamp in the UNX format (e.g., 1471219200)
+* `<api_token>`: The unique API Token associated with your TouchBistro Dev account. This will be provided to you by TouchBistro.
+* `<id>`: The unique identifier for your restaurant. This will be provided to you by TouchBistro.
+
+
+### Response
+
+```
+[
+  {
+    "tax_name": "State",
+    "bill_count_at_fullrate": 5,
+    "tax_amount_at_fullrate": 3.3,
+    "bill_count_at_reducedrate": 2,
+    "tax_amount_at_reducedrate": 0.12,
+    "tax_total": 3.42
+  },
+  {
+    "tax_name": "City",
+    "bill_count_at_fullrate": 3,
+    "tax_amount_at_fullrate": 1.55,
+    "bill_count_at_reducedrate": 0,
+    "tax_amount_at_reducedrate": 0,
+    "tax_total": 1.55
+  },
+]
+```
+Attribute | Description | Type
+----- | ----- | -----
+tax_name | Name of the tax. | string
+bill_count_at_fullrate | Number of bills that had the full tax applied. | int
+tax_amount_at_fullrate | Amount collected at the full tax rate. | decimal
+bill_count_at_reducedrate | Number of bills that collected tax at a programmed reduced rate. | int
+tax_amount_at_reducedrate | Amount collected at the reduced rate. | decimal
+tax_total | Total tax collected. | decimal
 
 
 
