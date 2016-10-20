@@ -118,6 +118,7 @@ This API requires an authentication token which is passed in as a query paramete
 * `<id>`: The unique identifier for your restaurant. This will be provided to you by TouchBistro.
 * `<datetime>`: A datetime stamp in the ISO 8601 format (e.g., 2016-03-14T16:43:22Z)
 * `<api_token>`: The unique API Token associated with your TouchBistro Dev account. This will be provided to you by TouchBistro.
+* `<universal_bill_identifier>`: The unique identifier for the bill in question
 
 ### Response
 
