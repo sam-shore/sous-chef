@@ -125,37 +125,42 @@ This API requires an authentication token which is passed in as a query paramete
 ```
 {
 	"bills": [{
-		"id": 55032173,
-		"uuid": "48D23CB6-82B8-4C56-8DF2-28D67649125F",
-		"order_number": 5896,
-		"bill_number": 9268,
-		"tax_1": "0.26",
-		"tax_2": "0.0",
-		"tax_3": "0.0",
-		"tax_1_name": "Tax 1",
-		"tax_2_name": "Tax 2",
-		"tax_3_name": "Tax 3",
-		"paid_at": "2016-08-05T18:18:51.000Z",
-		"paid_at_local": "2016-08-05T14:18:51.000Z",
-		"order_items": [{
-			"uuid": "9EFF7CC7-BFD2-412F-956E-FC4235056D90",
-			"parent_id": null,
-			"simple_modifier": false,
-			"discounts_total": "0.0",
-			"menu_item": "Lobster Tail",
-			"quantity": "1.0",
-			"total": "2.0"
-		}],
-		"payments": [{
-			"payment_method": "VISA",
-			"total": "2.26",
-			"tip": "3.0",
-			"change": "0.0"
-		}],
-		"total": "2.26",
-		"sub_total": "2.0",
-		"taxes": 0.26,
-		"universal_identifier": "8452-20160805-9268-125F"
+		{
+			id: 63415807,
+			uuid: "855AA618-7F0D-4748-A5BC-A6C3D73922D1",
+			order_number: 5906,
+			bill_number: 9272,
+			tax_1: "0.26",
+			tax_2: "0.0",
+			tax_3: "0.0",
+			tax_1_name: "Tax 1",
+			tax_2_name: "Tax 2",
+			tax_3_name: "Tax 3",
+			paid_at: "2016-08-16T23:47:31.000Z",
+			paid_at_local: "2016-08-16T19:47:31.000Z",
+			order_items: [{
+				uuid: "ED3B3710-5786-4D5A-BBF7-080059D47D61",
+				parent_id: null,
+				simple_modifier: false,
+				discounts_total: "0.0",
+				menu_item: "Lobster Tail",
+				menu_item_upc: "",
+				estimated_tax_1: null,
+				estimated_tax_2: null,
+				estimated_tax_3: null,
+				quantity: "1.0",
+				total: "2.0"
+			}],
+			payments: [{
+				payment_method: "VISA",
+				total: "2.26",
+				tip: "1.0",
+				change: "0.0"
+			}],
+			total: "2.26",
+			sub_total: "2.0",
+			taxes: 0.26,
+			universal_identifier: "8452-20160816-9272-22D1"
 	}]
 }
 ```
