@@ -118,7 +118,6 @@ This API requires an authentication token which is passed in as a query paramete
 * `<id>`: The unique identifier for your restaurant. This will be provided to you by TouchBistro.
 * `<datetime>`: A datetime stamp in the ISO 8601 format (e.g., 2016-03-14T16:43:22Z)
 * `<api_token>`: The unique API Token associated with your TouchBistro Dev account. This will be provided to you by TouchBistro.
-* `<universal_bill_identifier>`: The unique identifier for the bill in question
 
 ### Response
 
@@ -189,6 +188,86 @@ total | The total amount of the bill | float
 sub_total | The sub-total of the bill before taxes | float
 taxes | The tax amount for the bill | float
 universal_identifier | The unique identifier for the bill between cloud and iOS | uid
+
+
+## <a name="bills"></a>Bill
+
+### Authentication
+
+This API requires an authentication token which is passed in as a query parameter. As a result, the request must be sent over HTTPS.
+
+### Request
+
+```GET https://cloud.touchbistro.com/api/v1/bill?universal_bill_identifier=<id>&authentication_token=<api_token>```
+
+#### Params
+
+* `<universal_bill_identifier>`: The unique identifier for the bill in question
+
+### Response
+
+```
+{
+	id: 63415807,
+	uuid: "855AA618-7F0D-4748-A5BC-A6C3D73922D1",
+	order_number: 5906,
+	bill_number: 9272,
+	tax_1: "0.26",
+	tax_2: "0.0",
+	tax_3: "0.0",
+	tax_1_name: "Tax 1",
+	tax_2_name: "Tax 2",
+	tax_3_name: "Tax 3",
+	paid_at: "2016-08-16T23:47:31.000Z",
+	paid_at_local: "2016-08-16T19:47:31.000Z",
+	order_items: [{
+		uuid: "ED3B3710-5786-4D5A-BBF7-080059D47D61",
+		parent_id: null,
+		simple_modifier: false,
+		discounts_total: "0.0",
+		menu_item: "Lobster Tail",
+		menu_item_upc: "",
+		estimated_tax_1: null,
+		estimated_tax_2: null,
+		estimated_tax_3: null,
+		quantity: "1.0",
+		total: "2.0"
+	}],
+	payments: [{
+		payment_method: "VISA",
+		total: "2.26",
+		tip: "1.0",
+		change: "0.0"
+	}],
+	total: "2.26",
+	sub_total: "2.0",
+	taxes: 0.26,
+	universal_identifier: "8452-20160816-9272-22D1"
+}
+```
+
+#### Attributes
+
+##### Bill
+
+Attribute | Description | Type
+----- | ----- | -----
+id | A global identifer for the bill | big int
+uuid | A unique identifer for the bill | uuid
+order_number | A friendly order number identifier | small int
+bill_number | A friendly bill number identifier | small int
+paid_at | A datetime stamp indicating when the bill was paid with the payment processor | datetime
+paid_at_local | A datetime stamp indicating when the bill was paid on the iPad | datetime
+order_items | An array of items on the bill | order_item
+payments | An array of payment information | payment
+total | The total amount of the bill | float
+sub_total | The sub-total of the bill before taxes | float
+taxes | The tax amount for the bill | float
+universal_identifier | The unique identifier for the bill between cloud and iOS | uid
+
+
+
+
 
 ## <a name="Shifts"></a>Shifts
 
