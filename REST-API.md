@@ -7,7 +7,8 @@ The following documentation is designed to help you connect with the REST API. E
 Endpoint | Description
 --- | --- |
 [Menu](#menu) | Retrieve menu metadata, including menu item names and images
-[Bills](#bills) | Retrieve closed bills metadata, including sales amounts
+[Bills](#bills) | Retrieve closed bill metadata, including sales amounts, for all bills
+[Bill](#bill) | Retrieve closed bill metadata, including sales amounts, for a single bill
 [Summary](#Dashboard) | Retrieve the main summary dashboard
 [Drilldown](#Drilldown) | Retrieve the drilldown dashboard
 [Sales by Day](#SalesByDay) | Retrieve the sales by day report
@@ -190,7 +191,7 @@ taxes | The tax amount for the bill | float
 universal_identifier | The unique identifier for the bill between cloud and iOS | uid
 
 
-## <a name="bills"></a>Bill
+## <a name="bill"></a>Bill
 
 ### Authentication
 
