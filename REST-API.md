@@ -204,6 +204,7 @@ This API requires an authentication token which is passed in as a query paramete
 #### Params
 
 * `<universal_bill_identifier>`: The unique identifier for the bill in question
+* `<api_token>`: The unique API Token associated with your TouchBistro Dev account. This will be provided to you by TouchBistro.
 
 ### Response
 
