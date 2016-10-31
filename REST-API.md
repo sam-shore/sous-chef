@@ -886,72 +886,84 @@ This API requires an authentication token which is passed in as a query paramete
     "quantity": 8,
     "void_revenue": 0,
     "group_day": "2016-09-06"
+    "bill_count": 18
   },
   {
     "sales_revenue": 33.2,
     "quantity": 4,
     "void_revenue": 0,
     "group_day": "2016-09-07"
+    "bill_count": 9
   },
   {
     "sales_revenue": 180.64,
     "quantity": 23,
     "void_revenue": 0,
     "group_day": "2016-09-08"
+    "bill_count": 6
   },
   {
     "sales_revenue": 127.22,
     "quantity": 12,
     "void_revenue": 152.88,
     "group_day": "2016-09-09"
+    "bill_count": 3
   },
   {
     "sales_revenue": 1380.555,
     "quantity": 180,
     "void_revenue": 2.65,
     "group_day": "2016-09-11"
+    "bill_count": 18
   },
   {
     "sales_revenue": 515.55,
     "quantity": 64,
     "void_revenue": 0,
     "group_day": "2016-09-13"
+    "bill_count": 12
   },
   {
     "sales_revenue": 3974.44,
     "quantity": 503,
     "void_revenue": 9.99,
     "group_day": "2016-09-14"
-  },
+    "bill_count": 6
+},
   {
     "sales_revenue": 707.46,
     "quantity": 101,
     "void_revenue": 4,
     "group_day": "2016-09-15"
+    "bill_count": 9
   },
   {
     "sales_revenue": 28,
     "quantity": 3,
     "void_revenue": 0,
     "group_day": "2016-09-16"
+    "bill_count": 4
   },
   {
     "sales_revenue": 50.2825,
     "quantity": 11,
     "void_revenue": 59.33,
     "group_day": "2016-09-20"
+    "bill_count": 2
   },
   {
     "sales_revenue": 6.25,
     "quantity": 2,
     "void_revenue": 5,
     "group_day": "2016-09-27"
+    "bill_count": 7
   },
   {
     "sales_revenue": 20,
     "quantity": 4,
     "void_revenue": 0,
     "group_day": "2016-09-28"
+    "bill_count": 5
   }
 ]
 ```
@@ -962,6 +974,7 @@ sales_revenue | The per day sales totals (before tax). | string
 quantity | The number of menu items sold. This does not include voids. | decimal
 void_revenue | The value of voids (items voided after they were sent to the kitchen) authorized by a manager or admin. | decimal
 group_day | Sales day | string
+bill_count | The number of bills closed for the day. | int
 
 
 ## <a name="SalesbyCategory"></a>Sales by Category
@@ -1210,7 +1223,7 @@ This API requires an authentication token which is passed in as a query paramete
   {
     "payment_method_name": "Cash",
     "total_amount": 750.29,
-    "tip_total": 0,
+    "tip_total": 0.0,
     "record_count": 32,
     "sales_total": 750.29
   },
@@ -1272,6 +1285,7 @@ This API requires an authentication token which is passed in as a query paramete
     "discount_revenue": 0,
     "quantity": 4,
     "void_quantity": 0
+    "bill_count": 5
   },
   {
     "section_name": "Main",
@@ -1280,6 +1294,7 @@ This API requires an authentication token which is passed in as a query paramete
     "discount_revenue": 55.625,
     "quantity": 361,
     "void_quantity": 53
+    "bill_count":18
   },
   {
     "section_name": "Takeout",
@@ -1288,6 +1303,7 @@ This API requires an authentication token which is passed in as a query paramete
     "discount_revenue": 14,
     "quantity": 127,
     "void_quantity": 24
+    "bill_count": 9
   },
   {
     "section_name": "Cash Register",
@@ -1296,6 +1312,7 @@ This API requires an authentication token which is passed in as a query paramete
     "discount_revenue": 23.6875,
     "quantity": 423,
     "void_quantity": 15
+    "bill_count": 16
   }
 ]
 ```
@@ -1307,6 +1324,7 @@ void_revenue | Total value of voids authorized under this section. | float
 discount_revenue | Total value of discounts given under this section. | float
 quantity | Total number of menu items billed in this section. | int
 void_quantity | Total number of voids authorized in this section. This does not include discounts. | int
+bill_count | The total number of bills closed for that section. | int
 
 ## <a name="OrderType"></a>Order Type
 
