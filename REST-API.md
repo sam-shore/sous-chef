@@ -32,7 +32,7 @@ This API is publically accessible once enabled for a given restaurant.
 
 ### Request
 
-```GET https://cloud.touchbistro.com/api/v1/patron/restaurant/<id>/menu```
+```GET https://cloud.touchbistro.com/api/v1/restaurants/<id>/menu```
 
 #### Params
 
