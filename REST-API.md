@@ -112,7 +112,7 @@ This API requires an authentication token which is passed in as a query paramete
 
 ### Request
 
-```GET https://cloud.touchbistro.com/api/v1/bills?restaurant_id=<id>&from=<datetime>&to=<datetime>&authentication_token=<api_token>```
+```GET https://cloud.touchbistro.com/api/v1/bills?restaurant_id=<id>&from=<datetime>&to=<datetime>&page=<integer>&per_page=<integer>&authentication_token=<api_token>```
 
 #### Params
 
