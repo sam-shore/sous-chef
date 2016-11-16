@@ -118,6 +118,8 @@ This API requires an authentication token which is passed in as a query paramete
 
 * `<id>`: The unique identifier for your restaurant. This will be provided to you by TouchBistro.
 * `<datetime>`: A datetime stamp in the ISO 8601 format (e.g., 2016-03-14T16:43:22Z). The span between "from" and "to" must be less than one day.
+* `<page>`: An integer representing the page of results to return.
+* `<per_page>`: An integer representing the number of results to return per page.
 * `<api_token>`: The unique API Token associated with your TouchBistro Dev account. This will be provided to you by TouchBistro.
 
 ### Response
