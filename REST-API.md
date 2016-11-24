@@ -885,84 +885,84 @@ This API requires an authentication token which is passed in as a query paramete
 [
   {
     "sales_revenue": 62.74,
-    "quantity": 8,
+    "quantity": 8.0,
     "void_revenue": 0,
     "group_day": "2016-09-06"
     "bill_count": 18
   },
   {
     "sales_revenue": 33.2,
-    "quantity": 4,
+    "quantity": 4.0,
     "void_revenue": 0,
     "group_day": "2016-09-07"
     "bill_count": 9
   },
   {
     "sales_revenue": 180.64,
-    "quantity": 23,
+    "quantity": 23.0,
     "void_revenue": 0,
     "group_day": "2016-09-08"
     "bill_count": 6
   },
   {
     "sales_revenue": 127.22,
-    "quantity": 12,
+    "quantity": 12.0,
     "void_revenue": 152.88,
     "group_day": "2016-09-09"
     "bill_count": 3
   },
   {
     "sales_revenue": 1380.555,
-    "quantity": 180,
+    "quantity": 180.0,
     "void_revenue": 2.65,
     "group_day": "2016-09-11"
     "bill_count": 18
   },
   {
     "sales_revenue": 515.55,
-    "quantity": 64,
+    "quantity": 64.0,
     "void_revenue": 0,
     "group_day": "2016-09-13"
     "bill_count": 12
   },
   {
     "sales_revenue": 3974.44,
-    "quantity": 503,
+    "quantity": 503.0,
     "void_revenue": 9.99,
     "group_day": "2016-09-14"
     "bill_count": 6
 },
   {
     "sales_revenue": 707.46,
-    "quantity": 101,
+    "quantity": 101.0,
     "void_revenue": 4,
     "group_day": "2016-09-15"
     "bill_count": 9
   },
   {
     "sales_revenue": 28,
-    "quantity": 3,
+    "quantity": 3.0,
     "void_revenue": 0,
     "group_day": "2016-09-16"
     "bill_count": 4
   },
   {
     "sales_revenue": 50.2825,
-    "quantity": 11,
+    "quantity": 11.0,
     "void_revenue": 59.33,
     "group_day": "2016-09-20"
     "bill_count": 2
   },
   {
     "sales_revenue": 6.25,
-    "quantity": 2,
+    "quantity": 2.0,
     "void_revenue": 5,
     "group_day": "2016-09-27"
     "bill_count": 7
   },
   {
     "sales_revenue": 20,
-    "quantity": 4,
+    "quantity": 4.0,
     "void_revenue": 0,
     "group_day": "2016-09-28"
     "bill_count": 5
@@ -973,7 +973,7 @@ This API requires an authentication token which is passed in as a query paramete
 Attribute | Description | Type
 ----- | ----- | -----
 sales_revenue | The per day sales totals (before tax). | string
-quantity | The number of menu items sold. This does not include voids. | decimal
+quantity | The number of menu items sold. This does not include voids. TouchBistro supports ordering fractional amounts so the value is decimal. | decimal
 void_revenue | The value of voids (items voided after they were sent to the kitchen) authorized by a manager or admin. | decimal
 group_day | Sales day | string
 bill_count | The number of bills closed for the day. | int
