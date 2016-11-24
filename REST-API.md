@@ -1003,50 +1003,50 @@ This API requires an authentication token which is passed in as a query paramete
     "menu_category_name": "Mains",
     "sales_revenue": 349.6625,
     "void_revenue": 12.75,
-    "quantity": 24,
-    "void_quantity": 1
+    "quantity": 24.0,
+    "void_quantity": 1.0
   },
   {
     "menu_category_name": "Beer",
     "sales_revenue": 348.99,
     "void_revenue": 14.25,
-    "quantity": 73,
-    "void_quantity": 3
+    "quantity": 73.0,
+    "void_quantity": 3.0
   },
   {
     "menu_category_name": "Appetizers",
     "sales_revenue": 191.94,
     "void_revenue": 5,
-    "quantity": 48,
-    "void_quantity": 1
+    "quantity": 48.0,
+    "void_quantity": 1.0
   },
   {
     "menu_category_name": "Vodka",
     "sales_revenue": 24.3,
     "void_revenue": 0,
-    "quantity": 4,
-    "void_quantity": 0
+    "quantity": 4.0,
+    "void_quantity": 0.0
   },
   {
     "menu_category_name": "Desserts",
     "sales_revenue": 21.92,
     "void_revenue": 5.56,
     "quantity": 6,
-    "void_quantity": 1
+    "void_quantity": 1.0
   },
   {
     "menu_category_name": "Coffee",
     "sales_revenue": 20.65,
     "void_revenue": 0,
-    "quantity": 9,
-    "void_quantity": 0
+    "quantity": 9.0,
+    "void_quantity": 0.0
   },
   {
     "menu_category_name": "Soft Drinks",
     "sales_revenue": 12.75,
     "void_revenue": 0,
-    "quantity": 8,
-    "void_quantity": 0
+    "quantity": 8.0,
+    "void_quantity": 0.0
   },
 ]
 ```
@@ -1056,7 +1056,7 @@ Attribute | Description | Type
 menu_category_name | Name of the menu category. | string
 sales_revenue | The before taxes sales total for each category. | decimal
 void_revenue | The value of voids (items voided after they were sent to the kitchen) authorized by a manager or admin in this category. | string
-quantity | The actual number of items ordered and billed within this category. This does not include voids. | decimal
+quantity | The actual number of items ordered and billed within this category. This does not include voids. xxx  | decimal
 void_quantity | The number of items voided within this category. | decimal
 
 ## <a name="MenuItemSales"></a>Menu Item Sales
