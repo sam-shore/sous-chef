@@ -1056,7 +1056,7 @@ Attribute | Description | Type
 menu_category_name | Name of the menu category. | string
 sales_revenue | The before taxes sales total for each category. | decimal
 void_revenue | The value of voids (items voided after they were sent to the kitchen) authorized by a manager or admin in this category. | string
-quantity | The actual number of items ordered and billed within this category. This does not include voids. xxx  | decimal
+quantity | The actual number of items ordered and billed within this category. This does not include voids. TouchBistro supports ordering fractional amounts so the value is decimal. | decimal
 void_quantity | The number of items voided within this category. | decimal
 
 ## <a name="MenuItemSales"></a>Menu Item Sales
@@ -1197,7 +1197,7 @@ sales_category_name | A configured sales category. | string
 menu_category_name | A menu category. | string
 sales_revenue | The before taxes sales total for each menu item. Totals do not include tax and gratuity. The total also does not represent voids. | decimal
 void_revenue | Total  voids in dollar amounts authorized for each menu item. | decimal
-quantity | The number of times this item has been billed. TouchBistro supports the ordering fractional amounts so the value is decimal. | decimal
+quantity | The number of times this item has been billed. TouchBistro supports ordering fractional amounts so the value is decimal. | decimal
 void_quantity | The number of times the item has been voided. | decimal
 record_count | The total number of times this item has been ordered (billed plus voided). | int
 sales_percentage | Percentage of sales. | float
