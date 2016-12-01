@@ -630,9 +630,9 @@ This API requires an authentication token which is passed in as a query paramete
     "menu_item_name": "Singapore Sling",
     "records": 2,
     "sales_revenue": 25.1,
-    "void_revenue": 0,
-    "quantity": 2,
-    "void_quantity": 0
+    "void_revenue": 0.0,
+    "quantity": 2.0,
+    "void_quantity": 0.0
   },
   {
     "hour_of_day": 9,
@@ -643,8 +643,8 @@ This API requires an authentication token which is passed in as a query paramete
     "records": 1,
     "sales_revenue": 0,
     "void_revenue": 5.53,
-    "quantity": 0,
-    "void_quantity": 1
+    "quantity": 0.0,
+    "void_quantity": 1.0
   },
   {
     "hour_of_day": 10,
@@ -666,9 +666,9 @@ This API requires an authentication token which is passed in as a query paramete
     "menu_item_name": "Sweet Potato Fries",
     "records": 2,
     "sales_revenue": 6.5,
-    "void_revenue": 0,
-    "quantity": 2,
-    "void_quantity": 0
+    "void_revenue": 0.0,
+    "quantity": 2.0,
+    "void_quantity": 0.0
   },
   {
     "hour_of_day": 9,
@@ -690,9 +690,9 @@ This API requires an authentication token which is passed in as a query paramete
     "menu_item_name": "House Salad",
     "records": 1,
     "sales_revenue": 0,
-    "void_revenue": 4,
-    "quantity": 0,
-    "void_quantity": 1
+    "void_revenue": 4.0,
+    "quantity": 0.0,
+    "void_quantity": 1.0
   },
   {
     "hour_of_day": 13,
@@ -702,9 +702,9 @@ This API requires an authentication token which is passed in as a query paramete
     "menu_item_name": "House Salad",
     "records": 1,
     "sales_revenue": 4,
-    "void_revenue": 0,
-    "quantity": 1,
-    "void_quantity": 0
+    "void_revenue": 0.0,
+    "quantity": 1.0,
+    "void_quantity": 0.0
   },
   {
     "hour_of_day": 13,
@@ -714,9 +714,9 @@ This API requires an authentication token which is passed in as a query paramete
     "menu_item_name": "Latte",
     "records": 1,
     "sales_revenue": 4.5,
-    "void_revenue": 0,
-    "quantity": 1,
-    "void_quantity": 0
+    "void_revenue": 0.0,
+    "quantity": 1.0,
+    "void_quantity": 0.0
   },
   {
     "hour_of_day": 13,
@@ -726,9 +726,9 @@ This API requires an authentication token which is passed in as a query paramete
     "menu_item_name": "Pulled Pork",
     "records": 2,
     "sales_revenue": 25.5,
-    "void_revenue": 0,
-    "quantity": 2,
-    "void_quantity": 0
+    "void_revenue": 0.0,
+    "quantity": 2.0,
+    "void_quantity": 0.0
   },
   {
     "hour_of_day": 15,
@@ -738,9 +738,9 @@ This API requires an authentication token which is passed in as a query paramete
     "menu_item_name": "Zombie",
     "records": 1,
     "sales_revenue": 9.99,
-    "void_revenue": 0,
-    "quantity": 1,
-    "void_quantity": 0
+    "void_revenue": 0.0,
+    "quantity": 1.0,
+    "void_quantity": 0.0
   },
   {
     "hour_of_day": 15,
@@ -750,9 +750,9 @@ This API requires an authentication token which is passed in as a query paramete
     "menu_item_name": "Pulled Pork",
     "records": 2,
     "sales_revenue": 114.75,
-    "void_revenue": 0,
-    "quantity": 9,
-    "void_quantity": 0
+    "void_revenue": 0.0,
+    "quantity": 9.0,
+    "void_quantity": 0.0
   },
   {
     "hour_of_day": 13,
@@ -762,9 +762,9 @@ This API requires an authentication token which is passed in as a query paramete
     "menu_item_name": "Muller Time Lager",
     "records": 1,
     "sales_revenue": 4.75,
-    "void_revenue": 0,
-    "quantity": 1,
-    "void_quantity": 0
+    "void_revenue": 0.0,
+    "quantity": 1.0,
+    "void_quantity": 0.0
   },
   {
     "hour_of_day": 14,
@@ -774,9 +774,9 @@ This API requires an authentication token which is passed in as a query paramete
     "menu_item_name": "Trent Dark Ale",
     "records": 1,
     "sales_revenue": 6.25,
-    "void_revenue": 0,
-    "quantity": 1,
-    "void_quantity": 0
+    "void_revenue": 0.0,
+    "quantity": 1.0,
+    "void_quantity": 0.0
   },
   {
     "hour_of_day": 14,
@@ -786,9 +786,9 @@ This API requires an authentication token which is passed in as a query paramete
     "menu_item_name": "Loaded Nachos",
     "records": 1,
     "sales_revenue": 5,
-    "void_revenue": 0,
-    "quantity": 1,
-    "void_quantity": 0
+    "void_revenue": 0.0,
+    "quantity": 1.0,
+    "void_quantity": 0.0
   },
   {
     "hour_of_day": 15,
@@ -798,9 +798,9 @@ This API requires an authentication token which is passed in as a query paramete
     "menu_item_name": "SKVVY",
     "records": 1,
     "sales_revenue": 6,
-    "void_revenue": 0,
-    "quantity": 1,
-    "void_quantity": 0
+    "void_revenue": 0.0,
+    "quantity": 1.0,
+    "void_quantity": 0.0
   },
   {
     "hour_of_day": 15,
@@ -810,9 +810,9 @@ This API requires an authentication token which is passed in as a query paramete
     "menu_item_name": "Old Trog IPA",
     "records": 1,
     "sales_revenue": 5.97,
-    "void_revenue": 0,
-    "quantity": 1,
-    "void_quantity": 0
+    "void_revenue": 0.0,
+    "quantity": 1.0,
+    "void_quantity": 0.0
   },
   {
     "hour_of_day": 11,
@@ -822,9 +822,9 @@ This API requires an authentication token which is passed in as a query paramete
     "menu_item_name": "Singapore Sling",
     "records": 1,
     "sales_revenue": 12.55,
-    "void_revenue": 0,
-    "quantity": 1,
-    "void_quantity": 0
+    "void_revenue": 0.0,
+    "quantity": 1.0,
+    "void_quantity": 0.0
   },
   {
     "hour_of_day": 11,
@@ -834,9 +834,9 @@ This API requires an authentication token which is passed in as a query paramete
     "menu_item_name": "Espresso",
     "records": 1,
     "sales_revenue": 1.4,
-    "void_revenue": 0,
-    "quantity": 1,
-    "void_quantity": 0
+    "void_revenue": 0.0,
+    "quantity": 1.0,
+    "void_quantity": 0.0
   },
   {
     "hour_of_day": 14,
@@ -846,9 +846,9 @@ This API requires an authentication token which is passed in as a query paramete
     "menu_item_name": "SKVVY",
     "records": 1,
     "sales_revenue": 6,
-    "void_revenue": 0,
-    "quantity": 1,
-    "void_quantity": 0
+    "void_revenue": 0.0,
+    "quantity": 1.0,
+    "void_quantity": 0.0
   }
 ]
 ```
@@ -863,8 +863,8 @@ menu_item_name | The menu item's name. | string
 records | The number of these items ordered (sold or voided) in the hour | int
 sales_revenue | Total before tax sales accrued for that menu item. | decimal
 void_revenue | The total value of this item voided. | decimal
-quantity | The total number of this item sold. | int
-void_quantity | The total number of this item voided. | int
+quantity | The total number of this item sold. | decimal
+void_quantity | The total number of this item voided. | decimal
 
 
 ## <a name="SalesByDay"></a>Sales by Day
@@ -1288,8 +1288,8 @@ This API requires an authentication token which is passed in as a query paramete
     "sales_revenue": 33,
     "void_revenue": 0,
     "discount_revenue": 0,
-    "quantity": 4,
-    "void_quantity": 0
+    "quantity": 4.0,
+    "void_quantity": 0.0,
     "bill_count": 5
   },
   {
@@ -1297,8 +1297,8 @@ This API requires an authentication token which is passed in as a query paramete
     "sales_revenue": 3094.725,
     "void_revenue": 2.65,
     "discount_revenue": 55.625,
-    "quantity": 361,
-    "void_quantity": 53
+    "quantity": 361.0,
+    "void_quantity": 53.0,
     "bill_count":18
   },
   {
@@ -1306,8 +1306,8 @@ This API requires an authentication token which is passed in as a query paramete
     "sales_revenue": 799.45,
     "void_revenue": 156.87,
     "discount_revenue": 14,
-    "quantity": 127,
-    "void_quantity": 24
+    "quantity": 127.0,
+    "void_quantity": 24.0,
     "bill_count": 9
   },
   {
@@ -1315,8 +1315,8 @@ This API requires an authentication token which is passed in as a query paramete
     "sales_revenue": 3159.1625,
     "void_revenue": 74.33,
     "discount_revenue": 23.6875,
-    "quantity": 423,
-    "void_quantity": 15
+    "quantity": 423.0,
+    "void_quantity": 15.0,
     "bill_count": 16
   }
 ]
@@ -1327,8 +1327,8 @@ section_name | Name given to the floor plan section. | string
 sales_revenue | Sales, before taxes, for this section. | float
 void_revenue | Total value of voids authorized under this section. | float
 discount_revenue | Total value of discounts given under this section. | float
-quantity | Total number of menu items billed in this section. | int
-void_quantity | Total number of voids authorized in this section. This does not include discounts. | int
+quantity | Total number of menu items billed in this section. | decimal
+void_quantity | Total number of voids authorized in this section. This does not include discounts. | decimal
 bill_count | The total number of bills closed for that section. | int
 
 ## <a name="OrderType"></a>Order Type
@@ -1358,8 +1358,8 @@ This API requires an authentication token which is passed in as a query paramete
     "sales_revenue": 62.74,
     "void_revenue": 12.95,
     "discount_revenue": 0,
-    "quantity": 8,
-    "void_quantity": 1
+    "quantity": 8.0,
+    "void_quantity": 1.0
   },
   {
     "day": "2016-09-07",
@@ -1368,8 +1368,8 @@ This API requires an authentication token which is passed in as a query paramete
     "sales_revenue": 20.65,
     "void_revenue": 0,
     "discount_revenue": 0,
-    "quantity": 3,
-    "void_quantity": 0
+    "quantity": 3.0,
+    "void_quantity": 0.0
   },
   {
     "day": "2016-09-08",
@@ -1378,8 +1378,8 @@ This API requires an authentication token which is passed in as a query paramete
     "sales_revenue": 37.6,
     "void_revenue": 0,
     "discount_revenue": 0,
-    "quantity": 5,
-    "void_quantity": 0
+    "quantity": 5.0,
+    "void_quantity": 0.0
   },
   {
     "day": "2016-09-08",
@@ -1398,8 +1398,8 @@ This API requires an authentication token which is passed in as a query paramete
     "sales_revenue": 0,
     "void_revenue": 152.88,
     "discount_revenue": 0,
-    "quantity": 0,
-    "void_quantity": 20
+    "quantity": 0.0,
+    "void_quantity": 20.0
   },
   {
     "day": "2016-09-11",
@@ -1408,8 +1408,8 @@ This API requires an authentication token which is passed in as a query paramete
     "sales_revenue": 216.91,
     "void_revenue": 0,
     "discount_revenue": 0,
-    "quantity": 31,
-    "void_quantity": 0
+    "quantity": 31.0,
+    "void_quantity": 0.0
   },
   {
     "day": "2016-09-11",
@@ -1418,8 +1418,8 @@ This API requires an authentication token which is passed in as a query paramete
     "sales_revenue": 109.71,
     "void_revenue": 0,
     "discount_revenue": 0,
-    "quantity": 22,
-    "void_quantity": 0
+    "quantity": 22.0,
+    "void_quantity": 0.0
   },
   {
     "day": "2016-09-11",
@@ -1428,8 +1428,8 @@ This API requires an authentication token which is passed in as a query paramete
     "sales_revenue": 196.66,
     "void_revenue": 0,
     "discount_revenue": 0,
-    "quantity": 17,
-    "void_quantity": 0
+    "quantity": 17.0,
+    "void_quantity": 0.0
   },
   {
     "day": "2016-09-13",
@@ -1438,8 +1438,8 @@ This API requires an authentication token which is passed in as a query paramete
     "sales_revenue": 5.65,
     "void_revenue": 0,
     "discount_revenue": 0,
-    "quantity": 4,
-    "void_quantity": 0
+    "quantity": 4.0,
+    "void_quantity": 0.0
   },
   {
     "day": "2016-09-14",
@@ -1448,8 +1448,8 @@ This API requires an authentication token which is passed in as a query paramete
     "sales_revenue": 33.49,
     "void_revenue": 0,
     "discount_revenue": 0,
-    "quantity": 5,
-    "void_quantity": 0
+    "quantity": 5.0,
+    "void_quantity": 0.0
   },
   {
     "day": "2016-09-14",
@@ -1458,8 +1458,8 @@ This API requires an authentication token which is passed in as a query paramete
     "sales_revenue": 3805.16,
     "void_revenue": 6,
     "discount_revenue": 6,
-    "quantity": 470,
-    "void_quantity": 1
+    "quantity": 470.0,
+    "void_quantity": 1.0
   },
   {
     "day": "2016-09-15",
@@ -1468,8 +1468,8 @@ This API requires an authentication token which is passed in as a query paramete
     "sales_revenue": 42.99,
     "void_revenue": 0,
     "discount_revenue": 0,
-    "quantity": 12,
-    "void_quantity": 0
+    "quantity": 12.0,
+    "void_quantity": 0.0
   },
   {
     "day": "2016-09-15",
@@ -1478,8 +1478,8 @@ This API requires an authentication token which is passed in as a query paramete
     "sales_revenue": 664.47,
     "void_revenue": 4,
     "discount_revenue": 37.5,
-    "quantity": 89,
-    "void_quantity": 1
+    "quantity": 89.0,
+    "void_quantity": 1.0
   },
 ]
 ```
@@ -1492,8 +1492,8 @@ records | The number of items ordered (sold or voided) for the sales day. | int
 sales_revenue | Total before tax sales accrued for order.| decimal
 void_revenue | The total value of this item voided. | decimal
 discount_revenue | The total value of this item discounted. | decimal
-quantity | The total number of this item sold. | int
-void_quantity | The total number of this item voided. | int
+quantity | The total number of this item sold. | decimal
+void_quantity | The total number of this item voided. | decimal
 
 ## <a name="TimeofDay"></a>Time of Day
 
@@ -1516,281 +1516,281 @@ This API requires an authentication token which is passed in as a query paramete
 [
   {
     "sales_revenue": 402.63,
-    "quantity": 49,
+    "quantity": 49.0,
     "void_revenue": 0,
-    "void_quantity": 1,
+    "void_quantity": 1.0,
     "day_of_week": 1,
     "hour_of_day": 11
   },
   {
     "sales_revenue": 333.73,
-    "quantity": 49,
+    "quantity": 49.0,
     "void_revenue": 2.65,
-    "void_quantity": 6,
+    "void_quantity": 6.0,
     "day_of_week": 1,
     "hour_of_day": 12
   },
   {
     "sales_revenue": 465.475,
-    "quantity": 63,
-    "void_revenue": 0,
+    "quantity": 63.0,
+    "void_revenue": 0.0,
     "void_quantity": 1,
     "day_of_week": 1,
     "hour_of_day": 14
   },
   {
     "sales_revenue": 178.72,
-    "quantity": 19,
+    "quantity": 19.0,
     "void_revenue": 0,
-    "void_quantity": 0,
+    "void_quantity": 0.0,
     "day_of_week": 1,
     "hour_of_day": 16
   },
   {
     "sales_revenue": 5,
-    "quantity": 1,
+    "quantity": 1.0,
     "void_revenue": 0,
-    "void_quantity": 0,
+    "void_quantity": 0.0,
     "day_of_week": 3,
     "hour_of_day": 10
   },
   {
     "sales_revenue": 24.97,
-    "quantity": 8,
+    "quantity": 8.0,
     "void_revenue": 45.08,
-    "void_quantity": 4,
+    "void_quantity": 4.0,
     "day_of_week": 3,
     "hour_of_day": 11
   },
   {
     "sales_revenue": 20.3125,
-    "quantity": 2,
+    "quantity": 2.0,
     "void_revenue": 14.25,
-    "void_quantity": 3,
+    "void_quantity": 3.0,
     "day_of_week": 3,
     "hour_of_day": 12
   },
   {
     "sales_revenue": 451.53,
-    "quantity": 49,
+    "quantity": 49.0,
     "void_revenue": 0,
-    "void_quantity": 3,
+    "void_quantity": 3.0,
     "day_of_week": 3,
     "hour_of_day": 13
   },
   {
     "sales_revenue": 30.24,
-    "quantity": 5,
+    "quantity": 5.0,
     "void_revenue": 5,
-    "void_quantity": 1,
+    "void_quantity": 1.0,
     "day_of_week": 3,
     "hour_of_day": 15
   },
   {
     "sales_revenue": 38.57,
-    "quantity": 9,
+    "quantity": 9.0,
     "void_revenue": 0,
-    "void_quantity": 0,
+    "void_quantity": 0.0,
     "day_of_week": 3,
     "hour_of_day": 17
   },
   {
     "sales_revenue": 64.2,
-    "quantity": 11,
+    "quantity": 11.0,
     "void_revenue": 0,
-    "void_quantity": 0,
+    "void_quantity": 0.0,
     "day_of_week": 3,
     "hour_of_day": 21
   },
   {
     "sales_revenue": 20,
-    "quantity": 4,
+    "quantity": 4.0,
     "void_revenue": 0,
-    "void_quantity": 0,
+    "void_quantity": 0.0,
     "day_of_week": 4,
     "hour_of_day": 10
   },
   {
     "sales_revenue": 257.64,
-    "quantity": 18,
+    "quantity": 18.0,
     "void_revenue": 0,
-    "void_quantity": 12,
+    "void_quantity": 12.0,
     "day_of_week": 4,
     "hour_of_day": 11
   },
   {
     "sales_revenue": 8.25,
-    "quantity": 2,
+    "quantity": 2.0,
     "void_revenue": 0,
-    "void_quantity": 1,
+    "void_quantity": 1.0,
     "day_of_week": 4,
     "hour_of_day": 12
   },
   {
     "sales_revenue": 1551.54,
-    "quantity": 190,
+    "quantity": 190.0,
     "void_revenue": 0,
-    "void_quantity": 6,
+    "void_quantity": 6.0,
     "day_of_week": 4,
     "hour_of_day": 13
   },
   {
     "sales_revenue": 429.08,
-    "quantity": 64,
+    "quantity": 64.0,
     "void_revenue": 0,
-    "void_quantity": 1,
+    "void_quantity": 1.0,
     "day_of_week": 4,
     "hour_of_day": 14
   },
   {
     "sales_revenue": 1369.51,
-    "quantity": 165,
+    "quantity": 165.0,
     "void_revenue": 0,
-    "void_quantity": 0,
+    "void_quantity": 0.0,
     "day_of_week": 4,
     "hour_of_day": 15
   },
   {
     "sales_revenue": 68.58,
-    "quantity": 14,
+    "quantity": 14.0,
     "void_revenue": 3.99,
-    "void_quantity": 1,
+    "void_quantity": 1.0,
     "day_of_week": 4,
     "hour_of_day": 16
   },
   {
     "sales_revenue": 71.86,
-    "quantity": 14,
+    "quantity": 14.0,
     "void_revenue": 0,
-    "void_quantity": 1,
+    "void_quantity": 1.0,
     "day_of_week": 4,
     "hour_of_day": 18
   },
   {
     "sales_revenue": 180.78,
-    "quantity": 29,
+    "quantity": 29.0,
     "void_revenue": 0,
-    "void_quantity": 0,
+    "void_quantity": 0.0,
     "day_of_week": 4,
     "hour_of_day": 20
   },
   {
     "sales_revenue": 33,
-    "quantity": 4,
+    "quantity": 4.0,
     "void_revenue": 0,
-    "void_quantity": 0,
+    "void_quantity": 0.0,
     "day_of_week": 4,
     "hour_of_day": 21
   },
   {
     "sales_revenue": 16.7,
-    "quantity": 3,
+    "quantity": 3.0,
     "void_revenue": 6,
-    "void_quantity": 1,
+    "void_quantity": 1.0,
     "day_of_week": 4,
     "hour_of_day": 23
   },
   {
     "sales_revenue": 20.7,
-    "quantity": 4,
+    "quantity": 4.0,
     "void_revenue": 0,
-    "void_quantity": 0,
+    "void_quantity": 0.0,
     "day_of_week": 5,
     "hour_of_day": 0
   },
   {
     "sales_revenue": 143.04,
-    "quantity": 18,
+    "quantity": 18.0,
     "void_revenue": 0,
-    "void_quantity": 12,
+    "void_quantity": 12.0,
     "day_of_week": 5,
     "hour_of_day": 9
   },
   {
     "sales_revenue": 313.49,
-    "quantity": 40,
+    "quantity": 40.0,
     "void_revenue": 0,
-    "void_quantity": 0,
+    "void_quantity": 0.0,
     "day_of_week": 5,
     "hour_of_day": 10
   },
   {
     "sales_revenue": 43.75,
-    "quantity": 9,
+    "quantity": 9.0
     "void_revenue": 4,
-    "void_quantity": 1,
+    "void_quantity": 1.0,
     "day_of_week": 5,
     "hour_of_day": 13
   },
   {
     "sales_revenue": 37.6,
-    "quantity": 5,
+    "quantity": 5.0,
     "void_revenue": 0,
-    "void_quantity": 0,
+    "void_quantity": 0.0,
     "day_of_week": 5,
     "hour_of_day": 14
   },
   {
     "sales_revenue": 107.23,
-    "quantity": 8,
+    "quantity": 8.0,
     "void_revenue": 0,
-    "void_quantity": 1,
+    "void_quantity": 1.0,
     "day_of_week": 5,
     "hour_of_day": 16
   },
   {
     "sales_revenue": 103.61,
-    "quantity": 20,
+    "quantity": 20.0,
     "void_revenue": 0,
-    "void_quantity": 0,
+    "void_quantity": 0.0,
     "day_of_week": 5,
     "hour_of_day": 18
   },
   {
     "sales_revenue": 88.15,
-    "quantity": 21,
+    "quantity": 21.0,
     "void_revenue": 0,
-    "void_quantity": 14,
+    "void_quantity": 14.0,
     "day_of_week": 5,
     "hour_of_day": 21
   },
   {
     "sales_revenue": 51.23,
-    "quantity": 3,
+    "quantity": 3.0,
     "void_revenue": 0,
-    "void_quantity": 1,
+    "void_quantity": 1.0,
     "day_of_week": 5,
     "hour_of_day": 23
   },
   {
     "sales_revenue": 0,
-    "quantity": 0,
+    "quantity": 0.0,
     "void_revenue": 27.08,
-    "void_quantity": 5,
+    "void_quantity": 5.0,
     "day_of_week": 6,
     "hour_of_day": 9
   },
   {
     "sales_revenue": 0,
-    "quantity": 0,
+    "quantity": 0.0,
     "void_revenue": 125.8,
-    "void_quantity": 16,
+    "void_quantity": 16.0,
     "day_of_week": 6,
     "hour_of_day": 10
   },
   {
     "sales_revenue": 127.22,
-    "quantity": 12,
+    "quantity": 12.0,
     "void_revenue": 0,
-    "void_quantity": 0,
+    "void_quantity": 0.0,
     "day_of_week": 6,
     "hour_of_day": 15
   },
   {
     "sales_revenue": 28,
-    "quantity": 3,
+    "quantity": 3.0,
     "void_revenue": 0,
-    "void_quantity": 0,
+    "void_quantity": 0.0,
     "day_of_week": 6,
     "hour_of_day": 23
   }
@@ -1800,9 +1800,9 @@ This API requires an authentication token which is passed in as a query paramete
 Attribute | Description | Type
 ----- | ----- | -----
 sales_revenue | Sales total before taxes for the given day and hour block. | decimal
-quantity | Number of menu items sold. | int
+quantity | Number of menu items sold. | decimal
 void_revenue | Value of items voided and not sold. | decimal
-void_quantity | Number of items voided. | int
+void_quantity | Number of items voided. | decimal
 day_of_week | Number representing the day of the week. Sunday=1. Monday=2. And so on. | int
 hour_of_day | Hour the sale was made, based on a 24-hour clock (e.g., 2 pm is returned as 14). | int
 
@@ -1838,8 +1838,8 @@ This API requires an authentication token which is passed in as a query paramete
     "sales_revenue": 0,
     "void_revenue": 5,
     "discount_revenue": 0,
-    "quantity": 0,
-    "void_quantity": 1
+    "quantity": 0.0,
+    "void_quantity": 1.0
   },
  {
     "waiter_name": "Frank R.",
@@ -1853,8 +1853,8 @@ This API requires an authentication token which is passed in as a query paramete
     "sales_revenue": 1,
     "void_revenue": 0,
     "discount_revenue": 3,
-    "quantity": 1,
-    "void_quantity": 0
+    "quantity": 1.0,
+    "void_quantity": 0.0
   },
   {
     "waiter_name": "Mary S.",
@@ -1868,8 +1868,8 @@ This API requires an authentication token which is passed in as a query paramete
     "sales_revenue": 0,
     "void_revenue": 5.56,
     "discount_revenue": 0,
-    "quantity": 0,
-    "void_quantity": 1
+    "quantity": 0.0,
+    "void_quantity": 1.0
   },
   {
     "waiter_name": "Mary S.",
@@ -1883,8 +1883,8 @@ This API requires an authentication token which is passed in as a query paramete
     "sales_revenue": 0,
     "void_revenue": 12.75,
     "discount_revenue": 0,
-    "quantity": 0,
-    "void_quantity": 1
+    "quantity": 0.0,
+    "void_quantity": 1.0
   }
 ]
 ```
@@ -1902,8 +1902,8 @@ menu_category_name | The menu category the voided or discounted item is under. |
 sales_revenue | The actual sale amount realized after the discount. This will be 0 for voids. | decimal
 void_revenue | The amount voided. | decimal
 discount_revenue | The amount of the discount applied. | decimal
-quantity | The number of discounts applied. This may be greater than 1 if you discounted multiple menu items of same type (added using the Quantity option) on the same bill. | int
-void_quantity | The number of the items voided on the bill. If more than one of the same item was voided on a bill, this number will be greater than zero. For example, if two Singapore Sling drinks were added to an order, sent, and then voided, Void Quantity would be 2. | int
+quantity | The number of discounts applied. This may be greater than 1 if you discounted multiple menu items of same type (added using the Quantity option) on the same bill. | decimal
+void_quantity | The number of the items voided on the bill. If more than one of the same item was voided on a bill, this number will be greater than zero. For example, if two Singapore Sling drinks were added to an order, sent, and then voided, Void Quantity would be 2. | decimal
 
 
 ## <a name="Tips"></a>Tips
@@ -2000,8 +2000,8 @@ This API requires an authentication token which is passed in as a query paramete
     "sales_revenue": 3.75,
     "void_revenue": 0,
     "discount_revenue": 0,
-    "quantity": 1,
-    "void_quantity": 0,
+    "quantity": 1.0,
+    "void_quantity": 0.0,
     "record_count": 1
   },
   {
@@ -2012,8 +2012,8 @@ This API requires an authentication token which is passed in as a query paramete
     "sales_revenue": 36.5,
     "void_revenue": 0,
     "discount_revenue": 0,
-    "quantity": 2,
-    "void_quantity": 0,
+    "quantity": 2.0,
+    "void_quantity": 0.0,
     "record_count": 2
   },
   {
@@ -2024,8 +2024,8 @@ This API requires an authentication token which is passed in as a query paramete
     "sales_revenue": 6,
     "void_revenue": 0,
     "discount_revenue": 0,
-    "quantity": 3,
-    "void_quantity": 0,
+    "quantity": 3.0,
+    "void_quantity": 0.0,
     "record_count": 3
   },
 {
@@ -2036,8 +2036,8 @@ This API requires an authentication token which is passed in as a query paramete
     "sales_revenue": 5.56,
     "void_revenue": 5.56,
     "discount_revenue": 0,
-    "quantity": 1,
-    "void_quantity": 1,
+    "quantity": 1.0,
+    "void_quantity": 1.0,
     "record_count": 2
   },
 {
@@ -2060,8 +2060,8 @@ This API requires an authentication token which is passed in as a query paramete
     "sales_revenue": 25.5,
     "void_revenue": 12.75,
     "discount_revenue": 0,
-    "quantity": 2,
-    "void_quantity": 1,
+    "quantity": 2.0,
+    "void_quantity": 1.0,
     "record_count": 3
   }  {
     "waiter_name": "Mary S.",
@@ -2071,8 +2071,8 @@ This API requires an authentication token which is passed in as a query paramete
     "sales_revenue": 1.25,
     "void_revenue": 0,
     "discount_revenue": 0,
-    "quantity": 1,
-    "void_quantity": 0,
+    "quantity": 1.0,
+    "void_quantity": 0.0,
     "record_count": 1
   }
 ]
@@ -2088,8 +2088,8 @@ sales_revenue | The total sales the waiter generated for that menu item. If disc
 void_revenue | The total dollar amount of the void. | decimal
 discount_revenue | The total amount of the discount the waiter applied to that menu item. | decimal
 quantity | The total number of the items discounted by the waiter. | int
-void_quantity | The total number of times this item was voided. | int
-record_count | The total number of the item sold by the waiter. | int
+void_quantity | The total number of times this item was voided. | decimal
+record_count | The total number of the item sold by the waiter. | decimal
 
 ## <a name="Tax"></a>Tax Summary
 
