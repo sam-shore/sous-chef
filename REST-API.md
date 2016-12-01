@@ -383,12 +383,12 @@ This API requires an authentication token which is passed in as a query paramete
     {
       "sales_category_name": "Food",
       "sales_revenue": 542.25,
-      "quantity": 81
+      "quantity": 81.0
     },
     {
       "sales_category_name": "Alcohol",
       "sales_revenue": 348.99,
-      "quantity": 73
+      "quantity": 73.0
     }
   ],
   [
@@ -417,79 +417,79 @@ This API requires an authentication token which is passed in as a query paramete
     {
       "menu_category_name": "Beer",
       "sales_revenue": 348.99,
-      "quantity": 73
+      "quantity": 73.0
     },
     {
       "menu_category_name": "Mains",
       "sales_revenue": 303.85,
-      "quantity": 20
+      "quantity": 20.0
     },
     {
       "menu_category_name": "Appetizers",
       "sales_revenue": 120.97,
-      "quantity": 30
+      "quantity": 30.0
     },
     {
       "menu_category_name": "Breakfast",
       "sales_revenue": 48.37,
-      "quantity": 7
+      "quantity": 7.0
     },
     {
       "menu_category_name": "Vodka",
       "sales_revenue": 24.3,
-      "quantity": 4
+      "quantity": 4.0
     },
     {
       "menu_category_name": "Coffee",
       "sales_revenue": 19.4,
-      "quantity": 8
+      "quantity": 8.0
     },
     {
       "menu_category_name": "Soft Drinks",
       "sales_revenue": 12.75,
-      "quantity": 8
+      "quantity": 8.0
     },
     {
       "menu_category_name": "Desserts",
       "sales_revenue": 12.61,
-      "quantity": 4
+      "quantity": 4.0
     }
   ],
   [
     {
       "menu_item_name": "Pulled Pork",
       "sales_revenue": 114.75,
-      "quantity": 9,
+      "quantity": 9.0,
       "record_count": 9
     },
     {
       "menu_item_name": "Pasta and Clams",
       "sales_revenue": 79.6,
       "quantity": 5,
-      "record_count": 5
+      "record_count": 5.0
     },
     {
       "menu_item_name": "Victory Ale",
       "sales_revenue": 79.05,
-      "quantity": 4,
+      "quantity": 4.0,
       "record_count": 6
     },
     {
       "menu_item_name": "Loaded Nachos",
       "sales_revenue": 35,
-      "quantity": 7,
+      "quantity": 7.0,
       "record_count": 7
     },
     {
       "menu_item_name": "Wing Nibbler",
       "sales_revenue": 16.5,
-      "quantity": 3,
+      "quantity": 3.0,
       "record_count": 3
     },
     {
       "menu_item_name": "Sweet Potato Fries",
       "sales_revenue": 16.25,
-      "quantity": 5,
+      "quantity": 5.0
       "record_count": 5
     },
     {
@@ -501,7 +501,7 @@ This API requires an authentication token which is passed in as a query paramete
     {
       "menu_item_name": "Fries",
       "sales_revenue": 12,
-      "quantity": 4,
+      "quantity": 4.0,
       "record_count": 6
     },
     {
@@ -513,25 +513,25 @@ This API requires an authentication token which is passed in as a query paramete
     {
       "menu_item_name": "Omelette",
       "sales_revenue": 9.95,
-      "quantity": 1,
+      "quantity": 1.0,
       "record_count": 1
     },
     {
       "menu_item_name": "French Toast",
       "sales_revenue": 8.45,
-      "quantity": 1,
+      "quantity": 1.0,
       "record_count": 1
     },
     {
       "menu_item_name": "Cappuccino",
       "sales_revenue": 8,
-      "quantity": 2,
+      "quantity": 2.0,
       "record_count": 2
     },
     {
       "menu_item_name": "Trent Dark Ale",
       "sales_revenue": 6.25,
-      "quantity": 1,
+      "quantity": 1.0,
       "record_count": 2
     },
   ]
@@ -545,6 +545,7 @@ Attribute | Description | Type
 ----- | ----- | -----
 sales_revenue | Sales total before taxes for the given time period. | decimal
 tip_revenue | Tips recorded for the given time period. This will not include cash tips. | float
+parties | Number of orders taken | int
 
 ##### Customers
 Attribute | Description | Type
@@ -559,12 +560,13 @@ Attribute | Description | Type
 average_spend_per_party | Sales revenue divided by parties. | decimal
 average_spend_per_bill | Sales revenue divided by bills issued. | decimal
 average_spend_per_seat | Sales revenue divided by seats. | decimal
+
 ##### Top Sales Categories
 Attribute | Description | Type
 ----- | ----- | -----
 sales_category_name | Name of the sales category. | string
 sales_revenue | Total before tax sales accrued for menu items under that sales category. | decimal
-quantity | The number of menu items sold under the sales category. | int
+quantity | The number of menu items sold under the sales category. | decimal
 
 ##### Tender Types
 Attribute | Description | Type
@@ -572,12 +574,13 @@ Attribute | Description | Type
 payment_method_name | Type of payment (cash, credit card name, etc.) | string
 sales_total | Total before tax sales paid via the payment method. | decimal
 RecordCount | The number of bills paid or partially paid with the payment type. | int
+
 ##### Top Menu Categories
 Attribute | Description | Type
 ----- | ----- | -----
 menu_category_name | Menu category name | string
 sales_revenue | Total before tax sales accrued for menu items under that menu category. | decimal
-quantity | The number of menu items sold under the menu category. | int
+quantity | The number of menu items sold under the menu category. | decimal
 
 ##### Top Menu Items
 Attribute | Description | Type
