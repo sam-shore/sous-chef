@@ -9,6 +9,7 @@ Endpoint | Description
 [Menu](#menu) | Retrieve menu metadata, including menu item names and images
 [Bills](#bills) | Retrieve closed bill metadata, including sales amounts, for all bills
 [Bill](#bill) | Retrieve closed bill metadata, including sales amounts, for a single bill
+[Bills (Extended)](#bill-report-list) | Retrieve the extended view of bills for reporting purposes
 [Bill (Extended)](#bill-report) | Retrieve the extended view of a single bill for reporting purposes
 [Summary](#Dashboard) | Retrieve the main summary dashboard
 [Drilldown](#Drilldown) | Retrieve the drilldown dashboard
@@ -269,6 +270,74 @@ total | The total amount of the bill | float
 sub_total | The sub-total of the bill before taxes | float
 taxes | The tax amount for the bill | float
 universal_identifier | The unique identifier for the bill between cloud and iOS | uid
+
+
+## <a name="bill-report"></a>Bill (Extended)
+
+### Authentication
+
+This API requires an authentication token which is passed in as a query parameter. As a result, the request must be sent over HTTPS.
+
+### Request
+
+```GET https://cloud.touchbistro.com/cloud/reporting/bills?start=<start>&end=<end>&restaurant_id=<id>&authentication_token=<api_token>```
+
+#### Params
+
+* `<start>`: The UNIX start time for the period.
+* `<end>`: The UNIX end time for the period. Must be less than 24 hour span
+* `<id>`:The unique identifier for your restaurant. This will be provided to you by TouchBistro.
+* `<api_token>`: The unique API Token associated with your TouchBistro Dev account. This will be provided to you by TouchBistro.
+
+### Response
+
+```
+[{
+    "bill_id": 79251598,
+    "bill_number": 9299,
+    "order_number": 5928,
+    "paid_at_local": "2016-09-20T11:19:08.000+00:00",
+    "sales_revenue_with_tax": 2.26,
+    "payment_amount": 0,
+    "payment_count": 1,
+    "waiter_name": "Alex",
+    "take_out_type_id": null,
+    "take_out_type": "dinein",
+    "tax_amount": 0.26,
+    "sales_revenue": 2,
+    "discount_revenue": 0,
+    "void_revenue": 0,
+    "tax_1": 0.26,
+    "tax_2": 0,
+    "tax_3": 0
+},...
+]
+```
+
+#### Attributes
+
+##### TBD
+
+Attribute | Description | Type
+----- | ----- | -----
+id | The unique numeric identifier for the bill | integer
+uuid | The guaranteed unique identifier for the bill | guid
+closed_party_id | The unique nermic identifier for the party | integer
+bill_number | The customer-facing numeric identifier for the bill | integer
+tax_1 | The amount of tax 1 applied | decimal
+tax_2 | The amount of tax 2 applied | decimal
+tax_3 | The amount of tax 3 applied | decimal
+tax_1_name | The customer-facing name of tax 1 | string
+tax_2_name | The customer-facing name of tax 2 | string
+tax_3_name | The customer-facing name of tax 2 | string
+paid_at | The datetime of when the bill was paid | datetime
+paid_at_local | The datetime of when the bill was paid | datetime
+waiter | The waiter who closed the bill | object
+restaurant | The restaurant the bill belongs to | object
+order_items | The order items on the closed bill | object
+party | The party the bill belongs to | object
+payments | The payments associated with the closed bill | object
+table_name | The table associated with the closed bill | string
 
 
 ## <a name="bill-report"></a>Bill (Extended)
