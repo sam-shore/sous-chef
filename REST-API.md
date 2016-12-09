@@ -272,7 +272,7 @@ taxes | The tax amount for the bill | float
 universal_identifier | The unique identifier for the bill between cloud and iOS | uid
 
 
-## <a name="bill-report"></a>Bill (Extended)
+## <a name="bill-report-list"></a>Bill (Extended)
 
 ### Authentication
 
