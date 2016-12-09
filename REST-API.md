@@ -9,6 +9,7 @@ Endpoint | Description
 [Menu](#menu) | Retrieve menu metadata, including menu item names and images
 [Bills](#bills) | Retrieve closed bill metadata, including sales amounts, for all bills
 [Bill](#bill) | Retrieve closed bill metadata, including sales amounts, for a single bill
+[Bill (Extended)](#bill-report) | Retrieve the extended view of a single bill for reporting purposes
 [Summary](#Dashboard) | Retrieve the main summary dashboard
 [Drilldown](#Drilldown) | Retrieve the drilldown dashboard
 [Sales by Day](#SalesByDay) | Retrieve the sales by day report
@@ -270,6 +271,255 @@ taxes | The tax amount for the bill | float
 universal_identifier | The unique identifier for the bill between cloud and iOS | uid
 
 
+## <a name="bill-report"></a>Bill (Extended)
+
+### Authentication
+
+This API requires an authentication token which is passed in as a query parameter. As a result, the request must be sent over HTTPS.
+
+### Request
+
+```GET https://cloud.touchbistro.com/cloud/reporting/bill-report?id=<bill_id>&restaurant_id=<id>&authentication_token=<api_token>```
+
+#### Params
+
+* `<bill_id>`: The unique identifier for a particular bill. This can be retrieved by using the /bills/ endpoint to retrieve the full list of bills.
+* `<id>`:The unique identifier for your restaurant. This will be provided to you by TouchBistro.
+* `<api_token>`: The unique API Token associated with your TouchBistro Dev account. This will be provided to you by TouchBistro.
+
+### Response
+
+```
+{
+  "id": 87109549,
+  "uuid": "EB0C378E-3D3F-4ABF-A290-A2386647CD51",
+  "closed_party_id": 82035925,
+  "bill_number": 9312,
+  "tax_1": "3.27",
+  "tax_2": "0.0",
+  "tax_3": "0.0",
+  "tax_1_name": "Tax 1",
+  "tax_2_name": "Tax 2",
+  "tax_3_name": "Tax 3",
+  "paid_at": "2016-10-19T13:00:02.000Z",
+  "paid_at_local": "2016-10-19T09:00:02.000Z",
+  "waiter": {
+    "id": 14495010,
+    "name": "Alex",
+    "base_restaurant_id": 5173,
+    "lock_version": 44,
+    "created_at": "2016-06-29T17:28:49.650Z",
+    "updated_at": "2016-11-07T16:42:05.180Z",
+    "versioned_at": "1970-01-01T00:00:00.000Z",
+    "deleted_at": null,
+    "base_waiter_id": 94948,
+    "closed_data_upload_id": 62283692
+  },
+  "restaurant": {
+    "id": 12933,
+    "name": "Frank's Sangwiches",
+    "created_at": "2016-06-14T18:02:19.853Z",
+    "updated_at": "2016-11-01T17:43:30.487Z",
+    "currency_code": "USD",
+    "last_online": "2016-11-16T13:04:30.453Z",
+    "encrypted_legacy_open_table_token": null,
+    "encrypted_legacy_open_table_token_iv": null,
+    "encrypted_legacy_open_table_token_salt": null,
+    "start_of_day_offset": 0,
+    "tax_1": "0.13",
+    "tax_1_name": "Tax 1",
+    "tax_2": "0.0",
+    "tax_2_name": "Tax 2",
+    "reduced_tax_1_enabled": false,
+    "reduced_tax_1_threshold": "0.0",
+    "reduced_tax_1": "0.0",
+    "reduced_tax_2_enabled": false,
+    "reduced_tax_2_threshold": "0.0",
+    "reduced_tax_2": "0.0",
+    "tax_3": "0.0",
+    "tax_2_on_tax_1": false,
+    "inclusive_tax": false,
+    "tax_1_number": "R000123456789",
+    "base_active_menu_id": 9114,
+    "inclusive_tax_on_report": false,
+    "versioned_at": "2016-10-27T13:51:25.433Z",
+    "tax_3_name": "Tax 3",
+    "reduced_tax_3_enabled": false,
+    "reduced_tax_3_threshold": "0.0",
+    "reduced_tax_3": "0.0",
+    "credit_card_tip_out": false,
+    "tip_out_name": "",
+    "tip_out_amount": "0.0",
+    "minimum_party_size": 6,
+    "auto_gratuity_amount": "18.0",
+    "gratuity_mode": "tip_includes_gratuity",
+    "lock_version": 24,
+    "enable_cloud_menu_management": true,
+    "account_id": 7200,
+    "user_id": 8452,
+    "encrypted_open_table_token": null,
+    "encrypted_open_table_token_iv": null,
+    "encrypted_open_table_token_salt": null,
+    "base_restaurant_id": 5173,
+    "deleted_at": null,
+    "enable_tax_1": true,
+    "enable_tax_2": true,
+    "enable_tax_3": true,
+    "gratuity_display_name": "Gratuity",
+    "real_time_dashboard": false,
+    "tax_2_number": "",
+    "tax_3_number": "",
+    "enable_public_menu_view": true,
+    "display_hidden_menu_items_in_menu_view": null
+  },
+  "order_items": [{
+    "id": 431163239,
+    "uuid": "509D2107-4558-4C0D-8C29-4B081BE1DBAD",
+    "parent_id": 431163236,
+    "simple_modifier": true,
+    "quantity": 1,
+    "simple_modifiers_total": null,
+    "complex_modifiers_total": null,
+    "total": null,
+    "void": null,
+    "discounts": null,
+    "name": "Lime",
+    "menu_item_id": null,
+    "menu_item": "",
+    "menu_category_id": 0,
+    "menu_category": "",
+    "sales_category_id": 0,
+    "sales_category": ""
+  }, {
+    "id": 431163234,
+    "uuid": "487BA685-B4FB-4A8B-AF2C-A0C7338FE79D",
+    "parent_id": null,
+    "simple_modifier": false,
+    "quantity": 1,
+    "simple_modifiers_total": "0.0",
+    "complex_modifiers_total": "0.0",
+    "total": "5.59",
+    "void": "0.0",
+    "discounts": "2.4",
+    "name": null,
+    "menu_item_id": 847427,
+    "menu_item": "Margarita",
+    "menu_category_id": 173897,
+    "menu_category": "Drinks",
+    "sales_category_id": 13045,
+    "sales_category": "Alcohol"
+  }, {
+    "id": 431163235,
+    "uuid": "9A8BDB2E-4E08-4E64-8F12-4C1B6E389A9F",
+    "parent_id": null,
+    "simple_modifier": false,
+    "quantity": 1,
+    "simple_modifiers_total": "0.0",
+    "complex_modifiers_total": "0.0",
+    "total": "4.19",
+    "void": "0.0",
+    "discounts": "1.8",
+    "name": null,
+    "menu_item_id": 897466,
+    "menu_item": "Beer",
+    "menu_category_id": 173897,
+    "menu_category": "Drinks",
+    "sales_category_id": 13045,
+    "sales_category": "Alcohol"
+  }, {
+    "id": 431163236,
+    "uuid": "79F2F05E-2280-4BB2-B7B8-9BF2D164384B",
+    "parent_id": null,
+    "simple_modifier": false,
+    "quantity": 1,
+    "simple_modifiers_total": "0.0",
+    "complex_modifiers_total": "0.0",
+    "total": "4.89",
+    "void": "0.0",
+    "discounts": "2.1",
+    "name": null,
+    "menu_item_id": 897461,
+    "menu_item": "Martini",
+    "menu_category_id": 173897,
+    "menu_category": "Drinks",
+    "sales_category_id": 13045,
+    "sales_category": "Alcohol"
+  }, {
+    "id": 431163237,
+    "uuid": "489B49E2-3378-40C9-B637-C4C6791E80A4",
+    "parent_id": null,
+    "simple_modifier": false,
+    "quantity": 1,
+    "simple_modifiers_total": "0.0",
+    "complex_modifiers_total": "0.0",
+    "total": "4.89",
+    "void": "0.0",
+    "discounts": "2.1",
+    "name": null,
+    "menu_item_id": 882816,
+    "menu_item": "Mojito",
+    "menu_category_id": 173897,
+    "menu_category": "Drinks",
+    "sales_category_id": 13045,
+    "sales_category": "Alcohol"
+  }, {
+    "id": 431163238,
+    "uuid": "07714D18-6C62-4CA1-8C82-31AF6B9F8749",
+    "parent_id": null,
+    "simple_modifier": false,
+    "quantity": 1,
+    "simple_modifiers_total": "0.0",
+    "complex_modifiers_total": "0.0",
+    "total": "5.59",
+    "void": "0.0",
+    "discounts": "2.4",
+    "name": null,
+    "menu_item_id": 882814,
+    "menu_item": "Bloody Mary",
+    "menu_category_id": 173897,
+    "menu_category": "Drinks",
+    "sales_category_id": 13045,
+    "sales_category": "Alcohol"
+  }],
+  "party": [{
+    "restaurant": "Frank's Sangwiches",
+    "order_number": 5939,
+    "seat_count": 2
+  }],
+  "payments": [{
+    "payment_method": "Cash",
+    "total": "28.42",
+    "change": "0.0",
+    "tip": "0.0"
+  }],
+  "table_name": "206"
+}
+```
+
+#### Attributes
+
+##### TBD
+
+Attribute | Description | Type
+----- | ----- | -----
+id | The unique numeric identifier for the bill | integer
+uuid | The guaranteed unique identifier for the bill | guid
+closed_party_id | The unique nermic identifier for the party | integer
+bill_number | The customer-facing numeric identifier for the bill | integer
+tax_1 | The amount of tax 1 applied | decimal
+tax_2 | The amount of tax 2 applied | decimal
+tax_3 | The amount of tax 3 applied | decimal
+tax_1_name | The customer-facing name of tax 1 | string
+tax_2_name | The customer-facing name of tax 2 | string
+tax_3_name | The customer-facing name of tax 2 | string
+paid_at | The datetime of when the bill was paid | datetime
+paid_at_local | The datetime of when the bill was paid | datetime
+waiter | The waiter who closed the bill | object
+restaurant | The restaurant the bill belongs to | object
+order_items | The order items on the closed bill | object
+party | The party the bill belongs to | object
+payments | The payments associated with the closed bill | object
+table_name | The table associated with the closed bill | string
 
 
 
