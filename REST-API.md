@@ -600,7 +600,7 @@ This API requires an authentication token which is passed in as a query paramete
 
 ### Request
 
-```GET https://cloud.touchbistro.com/cloud/reporting/shifts?start=<datetime>&end=<datetime>&report=shifts&authentication_token=<api_token>&restaurant_id=<id>```
+```GET https://cloud.touchbistro.com/cloud/reporting/shift-details?start=<datetime>&end=<datetime>&report=shifts&authentication_token=<api_token>&restaurant_id=<id>```
 
 #### Params
 
